@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>David LeMair Tennis | Private Lessons, Clinics & Coaching | Annandale, VA</title>
-  <meta name="description" content="Expert tennis coaching with David LeMair in Annandale, VA. Private, semi-private & group clinics for all ages. USPTA certified. Serving Fairfax County. Book your first lesson today." />
+  <meta name="description" content="Expert tennis coaching with David LeMair in Annandale, VA. Private, semi-private & group clinics for all ages and skill levels. USPTA & PTR certified. 30+ years experience. 500+ students. Book today." />
   <meta name="keywords" content="David LeMair Tennis, tennis lessons Annandale VA, tennis coach Annandale, private tennis lessons Northern Virginia, tennis clinics Fairfax County, tennis instructor Annandale VA" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://davidlemairtennis.com/" />
@@ -14,12 +14,13 @@
   <meta property="og:description" content="Private, semi-private & group tennis coaching in Annandale, VA. All ages & skill levels. Book your first lesson today." />
   <meta property="og:url" content="https://davidlemairtennis.com/" />
 
+  <!-- Schema 1: Local Business + Aggregate Rating -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
     "name": "David LeMair Tennis",
-    "description": "Expert tennis coaching in Annandale, VA offering private lessons, semi-private lessons, and group clinics for all ages and skill levels.",
+    "description": "Expert tennis coaching in Annandale, VA offering private lessons, semi-private lessons, and group clinics for all ages and skill levels. USPTA and PTR certified with 30+ years of experience.",
     "url": "https://davidlemairtennis.com",
     "telephone": "+1-703-862-8702",
     "email": "teresalemair@me.com",
@@ -32,38 +33,313 @@
       "addressCountry": "US"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 38.8304, "longitude": -77.1967 },
-    "areaServed": ["Annandale","Fairfax","Burke","Springfield","Falls Church","Alexandria","Northern Virginia"],
+    "areaServed": {
+      "@type": "City",
+      "name": "Annandale",
+      "addressRegion": "VA",
+      "addressCountry": "US"
+    },
     "priceRange": "$$",
     "openingHours": "Mo-Su 07:00-20:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Sarah R." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "I went from never holding a racket to playing in a USTA league in just 6 months. David's lessons are structured but genuinely fun.",
+        "datePublished": "2024-09-12"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Mike T." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "My 8-year-old made his school team after just 4 months of clinics with David. Absolutely worth it.",
+        "datePublished": "2024-11-03"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Jennifer L." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "My backhand went from a liability to my best shot. I'm now winning matches I used to lose consistently.",
+        "datePublished": "2025-01-18"
+      }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Tennis Lesson Packages",
       "itemListElement": [
-        { "@type": "Offer", "name": "Private Tennis Lesson", "price": "85", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Semi-Private Tennis Lesson", "price": "55", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Group Tennis Clinic", "price": "35", "priceCurrency": "USD" }
+        {
+          "@type": "Offer",
+          "name": "Private Tennis Lesson",
+          "description": "One-on-one coaching tailored entirely to your game",
+          "price": "85",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Semi-Private Tennis Lesson",
+          "description": "Share the court with one partner for focused, affordable coaching",
+          "price": "55",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Group Tennis Clinic",
+          "description": "High-energy group sessions for 3-6 players",
+          "price": "45",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
       ]
     }
   }
   </script>
 
+  <!-- Schema 2: Person — David LeMair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "David LeMair",
+    "jobTitle": "Professional Tennis Coach",
+    "description": "USPTA and PTR certified tennis coach based in Annandale, VA with over 30 years of coaching experience and 500+ students taught.",
+    "url": "https://davidlemairtennis.com",
+    "telephone": "+1-703-862-8702",
+    "email": "teresalemair@me.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Annandale",
+      "addressRegion": "VA",
+      "postalCode": "22003",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "Tennis coaching",
+      "Junior tennis development",
+      "USTA league preparation",
+      "Tennis technique and strategy",
+      "Group tennis clinics",
+      "Tennis tournament organization"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "USPTA Certified Tennis Professional",
+        "credentialCategory": "Professional Certification",
+        "recognizedBy": { "@type": "Organization", "name": "United States Professional Tennis Association" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "PTR Certified Tennis Professional",
+        "credentialCategory": "Professional Certification",
+        "recognizedBy": { "@type": "Organization", "name": "Professional Tennis Registry" }
+      }
+    ],
+    "worksFor": {
+      "@type": "SportsActivityLocation",
+      "name": "David LeMair Tennis",
+      "url": "https://davidlemairtennis.com"
+    },
+    "sameAs": [
+      "https://www.facebook.com/davidlemairtennis",
+      "https://www.instagram.com/davidlemairtennis"
+    ]
+  }
+  </script>
+
+  <!-- Schema 3: SportsEvent — USTA Tournaments -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "David LeMair Tennis USTA Tournaments 2026",
+    "description": "USTA-sanctioned tennis tournaments hosted by David LeMair in Annandale, VA",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SportsEvent",
+          "name": "Boys Singles — USTA Sanctioned Tournament",
+          "description": "USTA-sanctioned singles competition for junior male players hosted by David LeMair Tennis in Annandale, VA.",
+          "sport": "Tennis",
+          "organizer": { "@type": "Person", "name": "David LeMair" },
+          "location": {
+            "@type": "Place",
+            "name": "Jefferson District Park",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Annandale",
+              "addressRegion": "VA",
+              "addressCountry": "US"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026-06-01",
+          "url": "https://davidlemairtennis.com/#tournaments"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SportsEvent",
+          "name": "Girls Singles — USTA Sanctioned Tournament",
+          "description": "USTA-sanctioned singles competition for junior female players hosted by David LeMair Tennis in Annandale, VA.",
+          "sport": "Tennis",
+          "organizer": { "@type": "Person", "name": "David LeMair" },
+          "location": {
+            "@type": "Place",
+            "name": "Jefferson District Park",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Annandale",
+              "addressRegion": "VA",
+              "addressCountry": "US"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026-06-01",
+          "url": "https://davidlemairtennis.com/#tournaments"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SportsEvent",
+          "name": "Adult Singles — USTA Sanctioned Tournament",
+          "description": "USTA-sanctioned adult singles tennis tournament hosted by David LeMair Tennis in Annandale, VA.",
+          "sport": "Tennis",
+          "organizer": { "@type": "Person", "name": "David LeMair" },
+          "location": {
+            "@type": "Place",
+            "name": "Jefferson District Park",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Annandale",
+              "addressRegion": "VA",
+              "addressCountry": "US"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026-07-01",
+          "url": "https://davidlemairtennis.com/#tournaments"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SportsEvent",
+          "name": "Adult Doubles — USTA Sanctioned Tournament",
+          "description": "USTA-sanctioned adult doubles tennis tournament hosted by David LeMair Tennis in Annandale, VA.",
+          "sport": "Tennis",
+          "organizer": { "@type": "Person", "name": "David LeMair" },
+          "location": {
+            "@type": "Place",
+            "name": "Jefferson District Park",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Annandale",
+              "addressRegion": "VA",
+              "addressCountry": "US"
+            }
+          },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "startDate": "2026-07-01",
+          "url": "https://davidlemairtennis.com/#tournaments"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema 4: FAQ Page (10 questions for maximum SERP coverage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "How much do tennis lessons cost in Annandale, VA?", "acceptedAnswer": { "@type": "Answer", "text": "Private lessons start at $85/hour, semi-private lessons at $55/person/hour, and group clinics start at $45/person. Package discounts available when you book 5 or 10 lessons." } },
-      { "@type": "Question", "name": "Do you offer tennis lessons for beginners in Annandale?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! We welcome players of all skill levels including complete beginners. Your first lesson includes a skill assessment so we can build a custom training plan for your goals." } },
-      { "@type": "Question", "name": "Where do David LeMair tennis lessons take place?", "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts." } },
-      { "@type": "Question", "name": "What age groups does David LeMair teach?", "acceptedAnswer": { "@type": "Answer", "text": "David teaches all ages from 4-year-old juniors to adults 70+. Each program is designed specifically for the player's age, physical abilities, and goals." } }
+      {
+        "@type": "Question",
+        "name": "How much do tennis lessons cost in Annandale, VA?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Private lessons with David LeMair start at $85/hour for a single session, $75/lesson in a 5-pack, and $70/lesson in a 10-pack. Semi-private lessons are $55/person/hour. Group clinics start at $45/person. Junior clinics are $30/child." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer tennis lessons for beginners in Annandale?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! David LeMair welcomes players of all skill levels including complete beginners. Your first lesson includes a skill assessment so we can build a custom training plan for your goals. Most adult beginners are rallying confidently within 2-3 sessions." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do David LeMair tennis lessons take place?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts. Public court fees are not included in lesson pricing." }
+      },
+      {
+        "@type": "Question",
+        "name": "What age groups does David LeMair teach?",
+        "acceptedAnswer": { "@type": "Answer", "text": "David teaches all ages from 4-year-old juniors to adults 70+. Junior programs use age-appropriate equipment including foam balls and shorter rackets. Adult programs focus on technique, fitness, and competitive play depending on goals." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is David LeMair a certified tennis coach?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. David LeMair holds both USPTA (United States Professional Tennis Association) and PTR (Professional Tennis Registry) certifications — the two leading professional credentials in the tennis coaching industry. He has over 30 years of coaching experience and has taught 500+ students." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cancellation policy for tennis lessons?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cancellations or reschedules require 24 hours advance notice at no charge. Late cancellations under 24 hours may incur a $25 fee. Weather-related cancellations are always rescheduled free of charge." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does David LeMair offer junior tennis lessons in Annandale?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. David specializes in junior tennis development for kids ages 4 through 17. Junior programs use age-appropriate equipment and coaching methods to build proper fundamentals in a fun, encouraging environment. Junior group clinics are available at $30 per child." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does David LeMair host tennis tournaments?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. David LeMair hosts USTA-sanctioned tennis tournaments in Annandale, VA including Boys Singles, Girls Singles, Adult Singles, and Adult Doubles events. Visit the tournament section of this website for 2026 schedule updates." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between private and semi-private tennis lessons?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Private lessons are one-on-one sessions with David, providing undivided attention and the fastest path to improvement at $85/hour. Semi-private lessons include two players (you bring your own partner) and cost $55/person/hour — ideal for couples, friends, or parent and child who want to improve together at a lower cost." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a tennis lesson with David LeMair?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can book a lesson by filling out the inquiry form on this website, calling (703) 862-8702, or emailing teresalemair@me.com. David will confirm your booking and answer any questions within a few hours." }
+      }
     ]
   }
   </script>
 
-  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <!-- Performance: DNS prefetch fallbacks for older browsers -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://www.google.com" />
+
+  <!-- Google Fonts: Playfair Display + DM Sans (font-display:swap via &display=swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Additional SEO meta -->
+  <meta name="author" content="David LeMair" />
+  <meta name="geo.region" content="US-VA" />
+  <meta name="geo.placename" content="Annandale, Virginia" />
+  <meta name="geo.position" content="38.8304;-77.1967" />
+  <meta name="ICBM" content="38.8304, -77.1967" />
 
   <style>
     /* ── TOKENS ──────────────────────────────────── */
