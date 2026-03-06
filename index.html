@@ -21,11 +21,11 @@
     "name": "David LeMair Tennis",
     "description": "Expert tennis coaching in Annandale, VA offering private lessons, semi-private lessons, and group clinics for all ages and skill levels.",
     "url": "https://davidlemairtennis.com",
-    "telephone": "+1-571-555-0100",
+    "telephone": "+1-703-862-8702",
     "email": "teresalemair@me.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Annandale Community Park",
+      "streetAddress": "Jefferson District Park",
       "addressLocality": "Annandale",
       "addressRegion": "VA",
       "postalCode": "22003",
@@ -54,7 +54,7 @@
     "mainEntity": [
       { "@type": "Question", "name": "How much do tennis lessons cost in Annandale, VA?", "acceptedAnswer": { "@type": "Answer", "text": "Private lessons start at $85/hour, semi-private lessons at $55/person/hour, and group clinics start at $45/person. Package discounts available when you book 5 or 10 lessons." } },
       { "@type": "Question", "name": "Do you offer tennis lessons for beginners in Annandale?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! We welcome players of all skill levels including complete beginners. Your first lesson includes a skill assessment so we can build a custom training plan for your goals." } },
-      { "@type": "Question", "name": "Where do David LeMair tennis lessons take place?", "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held at Annandale Community Park tennis courts and other convenient Annandale, VA locations." } },
+      { "@type": "Question", "name": "Where do David LeMair tennis lessons take place?", "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts." } },
       { "@type": "Question", "name": "What age groups does David LeMair teach?", "acceptedAnswer": { "@type": "Answer", "text": "David teaches all ages from 4-year-old juniors to adults 70+. Each program is designed specifically for the player's age, physical abilities, and goals." } }
     ]
   }
@@ -1482,6 +1482,10 @@
       .hero__ctas .btn { width: 100%; }
       .cta-banner__btns { flex-direction: column; align-items: center; }
       .about__stats-row { grid-template-columns: 1fr 1fr; }
+      .tournament-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 768px) {
+      .tournament-grid { grid-template-columns: 1fr 1fr !important; }
     }
   </style>
 </head>
@@ -1583,7 +1587,6 @@
                 <option value="" disabled selected>I'm interested in...</option>
                 <option>Private Lesson (1-on-1)</option>
                 <option>Semi-Private Lesson (2 players)</option>
-                <option>Group Clinic (3–6 players)</option>
                 <option>Junior Program (under 18)</option>
               </select>
               <select required>
@@ -1646,7 +1649,7 @@
       <div class="services__grid reveal">
         <!-- Private -->
         <div class="service-card">
-          <div class="service-card__tag">01 — Private</div>
+          <div class="service-card__tag">Private</div>
           <h3 class="service-card__title">Private Lessons</h3>
           <p class="service-card__desc">100% personalized coaching with undivided attention. The fastest path to real improvement. Ideal for players serious about leveling up.</p>
           <div class="service-card__price">$85</div>
@@ -1664,7 +1667,7 @@
         <!-- Semi-Private (featured) -->
         <div class="service-card service-card--featured">
           <div class="service-card__popular">Most Popular</div>
-          <div class="service-card__tag">02 — Semi-Private</div>
+          <div class="service-card__tag">Semi-Private</div>
           <h3 class="service-card__title">Semi-Private Lessons</h3>
           <p class="service-card__desc">Share the court with one partner. Focused coaching at a fraction of the private cost — perfect for couples, friends, or parent &amp; child.</p>
           <div class="service-card__price">$55</div>
@@ -1681,7 +1684,7 @@
 
         <!-- Group Clinic -->
         <div class="service-card">
-          <div class="service-card__tag">03 — Clinic</div>
+          <div class="service-card__tag">Clinic</div>
           <h3 class="service-card__title">Group Clinics</h3>
           <p class="service-card__desc">High-energy sessions for 3–6 players. More court time, more points, and a chance to build your tennis community at the most accessible price.</p>
           <div class="service-card__price">$45+</div>
@@ -1950,7 +1953,7 @@
         </div>
 
         <div class="pricing-card pricing-card--featured">
-          <div class="pricing-card__badge">Best Value</div>
+          <div class="pricing-card__badge">Most Popular</div>
           <div class="pricing-card__name">5-Lesson Pack</div>
           <p class="pricing-card__desc">The most popular choice for consistent, measurable improvement. Save $50.</p>
           <div class="pricing-card__price"><sup>$</sup>375</div>
@@ -1967,6 +1970,7 @@
         </div>
 
         <div class="pricing-card">
+          <div class="pricing-card__badge" style="background:var(--forest);">Best Value</div>
           <div class="pricing-card__name">10-Lesson Pack</div>
           <p class="pricing-card__desc">Maximum savings for dedicated players committed to long-term improvement.</p>
           <div class="pricing-card__price"><sup>$</sup>700</div>
@@ -2045,7 +2049,7 @@
                 <span class="faq__icon">+</span>
               </button>
               <div class="faq__a">
-                <div class="faq__a-inner">Primarily at Annandale Community Park (Hummer Road) and other Annandale, VA courts. Public court fees are not included in lesson pricing.</div>
+                <div class="faq__a-inner">Primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts. Public court fees are not included in lesson pricing.</div>
               </div>
             </div>
             <div class="faq__item">
@@ -2147,10 +2151,11 @@
             Based in Annandale, VA, David coaches players right in the community — at local courts that are convenient and familiar to you.
           </p>
           <p style="font-size:15px; color:var(--ink-mid); line-height:1.8; margin-bottom:24px;">
-            With access to courts throughout Annandale, there's always a great location nearby. David prioritizes lighted courts for evening sessions.
+            With access to courts throughout Annandale as well as Jefferson District Park in Idylwood, there's always a great location nearby. David prioritizes lighted courts for evening sessions.
           </p>
           <div class="local__tags">
             <span class="local__tag">Jefferson District Park</span>
+            <span class="local__tag">Mason District Park</span>
             <span class="local__tag">Braddock Heights</span>
             <span class="local__tag">Broyhill Crest</span>
             <span class="local__tag">Camelot</span>
@@ -2184,11 +2189,11 @@
       <div class="section-header section-header--center reveal">
         <div class="eyebrow">USTA-Sanctioned Events</div>
         <h2 class="section-title" style="color:var(--chalk);">Tournament Schedule</h2>
-        <p class="section-sub">David LeMair hosts officially sanctioned USTA tournaments in Annandale, VA, open to juniors and adults across all skill levels.</p>
+        <p class="section-sub">David LeMair hosts officially sanctioned USTA tournaments in Annandale, VA, open to juniors and adults across numerous skill levels.</p>
       </div>
 
       <!-- Tournament categories -->
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px;" class="reveal">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px;" class="reveal tournament-grid">
 
         <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-top:3px solid var(--copper); border-radius:4px; padding:28px 22px; text-align:center; transition:border-color 0.25s ease;">
           <div style="font-size:28px; margin-bottom:12px;">🏆</div>
@@ -2208,14 +2213,14 @@
           <div style="font-size:28px; margin-bottom:12px;">🎾</div>
           <div style="font-family:var(--ff-display); font-size:17px; font-weight:700; color:var(--chalk); margin-bottom:6px;">Adult Singles</div>
           <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:12px;">Adult Division</div>
-          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">USTA-sanctioned singles open to adult players of all skill levels.</div>
+          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">USTA sanctioned singles.</div>
         </div>
 
         <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-top:3px solid var(--copper); border-radius:4px; padding:28px 22px; text-align:center; transition:border-color 0.25s ease;">
           <div style="font-size:28px; margin-bottom:12px;">🎾</div>
           <div style="font-family:var(--ff-display); font-size:17px; font-weight:700; color:var(--chalk); margin-bottom:6px;">Adult Doubles</div>
           <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:12px;">Adult Division</div>
-          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">USTA-sanctioned doubles for adult teams competing at Annandale courts.</div>
+          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">USTA sanctioned doubles.</div>
         </div>
 
       </div>
@@ -2227,7 +2232,7 @@
           <div style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; background:rgba(184,114,30,0.15); border:1px solid rgba(184,114,30,0.35); margin:0 auto 20px;">
             <span style="font-size:24px;">📅</span>
           </div>
-          <h3 style="font-family:var(--ff-display); font-size:26px; font-weight:700; color:var(--chalk); margin-bottom:12px;">2025 Tournament Schedule Coming Soon</h3>
+          <h3 style="font-family:var(--ff-display); font-size:26px; font-weight:700; color:var(--chalk); margin-bottom:12px;">2026 Tournament Schedule Coming Soon</h3>
           <p style="font-size:15px; color:rgba(247,243,235,0.55); max-width:520px; margin:0 auto 28px; line-height:1.75;">
             Dates and registration details for all USTA-sanctioned events will be posted here once confirmed. Enter your email to be notified the moment registration opens.
           </p>
@@ -2260,7 +2265,7 @@
       </p>
       <div class="cta-banner__btns">
         <a href="#book" class="btn btn-chalk btn-lg">Book Your First Lesson</a>
-        <a href="tel:+15715550100" class="btn btn-ghost-copper-dark btn-lg">Call (571) 555-0100</a>
+        <a href="tel:+15715550100" class="btn btn-ghost-copper-dark btn-lg">Call (703) 862-8702</a>
         <a href="mailto:teresalemair@me.com" class="btn btn-ghost-copper-dark btn-lg">Email David</a>
       </div>
     </div>
@@ -2276,11 +2281,11 @@
           <p class="footer__desc">Expert tennis instruction for players of all ages and skill levels across Annandale, VA and the greater Northern Virginia area.</p>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">📍</span>
-            <span>Annandale Community Park, Annandale, VA 22003</span>
+            <span>Annandale, VA 22003</span>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">📞</span>
-            <a href="tel:+15715550100" style="color:inherit;">(571) 555-0100</a>
+            <a href="tel:+15715550100" style="color:inherit;">(703) 862-8702</a>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">✉️</span>
@@ -2318,14 +2323,9 @@
         </div>
 
         <div>
-          <div class="footer__col-title">Service Areas</div>
+          <div class="footer__col-title">Service Area</div>
           <ul class="footer__links">
             <li><a href="#location">Annandale, VA</a></li>
-            <li><a href="#location">Fairfax, VA</a></li>
-            <li><a href="#location">Burke, VA</a></li>
-            <li><a href="#location">Springfield, VA</a></li>
-            <li><a href="#location">Falls Church, VA</a></li>
-            <li><a href="#location">Alexandria, VA</a></li>
           </ul>
         </div>
       </div>
@@ -2333,9 +2333,9 @@
       <div class="footer__bottom">
         <div>© 2025 David LeMair Tennis · Annandale, VA · All rights reserved</div>
         <div class="footer__bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms</a>
-          <a href="#">Sitemap</a>
+          <a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a>
+          <a href="#" onclick="openModal('terms'); return false;">Terms of Service</a>
+          <a href="#" onclick="openModal('sitemap'); return false;">Sitemap</a>
         </div>
       </div>
     </div>
@@ -2346,7 +2346,107 @@
     <a href="#book">🎾 Book a Lesson</a>
   </div>
 
+  <!-- ══════ LEGAL MODALS ══════ -->
+  <div id="legalModal" style="display:none; position:fixed; inset:0; z-index:500; background:rgba(13,32,22,0.85); backdrop-filter:blur(6px); overflow-y:auto; padding:40px 20px;" onclick="closeModalOutside(event)">
+    <div id="legalModalInner" style="background:var(--chalk); border-radius:6px; max-width:720px; margin:0 auto; padding:48px 52px; position:relative; border-top:3px solid var(--copper);">
+      <button onclick="closeModal()" style="position:absolute; top:20px; right:24px; background:none; border:none; font-size:24px; color:var(--mist); cursor:pointer; line-height:1;">×</button>
+      <div id="legalModalContent"></div>
+    </div>
+  </div>
+
+  <template id="tpl-privacy">
+    <div class="eyebrow">Legal</div>
+    <h2 style="font-family:var(--ff-display); font-size:30px; font-weight:700; margin-bottom:24px;">Privacy Policy</h2>
+    <p style="font-size:13px; color:var(--mist); margin-bottom:28px;">Last updated: January 1, 2025</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">1. Information We Collect</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">We collect information you voluntarily provide when you submit a lesson inquiry form, including your name, email address, and phone number. We also collect standard web analytics data such as pages visited and browser type.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">2. How We Use Your Information</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">Your information is used solely to contact you about scheduling tennis lessons and to respond to your inquiries. We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">3. Data Retention</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">We retain your contact information only as long as necessary to provide our coaching services or as required by applicable law.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">4. Communications</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">By submitting the inquiry form, you consent to receive follow-up communications from David LeMair Tennis regarding your lesson request. You may opt out at any time by replying to any message with "STOP" or by emailing <a href="mailto:teresalemair@me.com" style="color:var(--copper);">teresalemair@me.com</a>.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">5. Cookies</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">This website may use basic analytics cookies to understand how visitors interact with the page. No personally identifiable information is stored in cookies.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">6. Contact</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8;">For any privacy-related questions, contact David LeMair Tennis at <a href="mailto:teresalemair@me.com" style="color:var(--copper);">teresalemair@me.com</a> or call <a href="tel:+17038628702" style="color:var(--copper);">(703) 862-8702</a>.</p>
+  </template>
+
+  <template id="tpl-terms">
+    <div class="eyebrow">Legal</div>
+    <h2 style="font-family:var(--ff-display); font-size:30px; font-weight:700; margin-bottom:24px;">Terms of Service</h2>
+    <p style="font-size:13px; color:var(--mist); margin-bottom:28px;">Last updated: January 1, 2025</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">1. Acceptance of Terms</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">By booking a lesson or using this website, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">2. Lesson Bookings</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">All lessons are subject to court and coach availability. Confirmed bookings are binding. Lesson packages must be paid in full prior to commencement of the first session.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">3. Cancellation Policy</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">Cancellations or reschedules require 24 hours advance notice. Late cancellations (less than 24 hours) may forfeit the session or incur a $25 cancellation fee. Weather-related cancellations will be rescheduled at no charge.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">4. Package Expiration</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">5-lesson packages expire 6 months from date of purchase. 10-lesson packages expire 12 months from date of purchase. Unused sessions after expiration are forfeited without refund.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">5. Liability Waiver</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">Tennis is a physical activity with inherent risks. By participating in lessons, clients acknowledge these risks and agree that David LeMair Tennis is not liable for any injury, accident, or loss arising from participation, except in cases of gross negligence.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">6. Conduct</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8; margin-bottom:16px;">All participants are expected to conduct themselves respectfully on and off the court. David LeMair Tennis reserves the right to refuse or discontinue service to any individual for inappropriate conduct.</p>
+    <h3 style="font-family:var(--ff-display); font-size:18px; font-weight:700; margin:24px 0 10px;">7. Contact</h3>
+    <p style="font-size:14px; color:var(--ink-mid); line-height:1.8;">Questions regarding these terms? Contact us at <a href="mailto:teresalemair@me.com" style="color:var(--copper);">teresalemair@me.com</a>.</p>
+  </template>
+
+  <template id="tpl-sitemap">
+    <div class="eyebrow">Navigation</div>
+    <h2 style="font-family:var(--ff-display); font-size:30px; font-weight:700; margin-bottom:32px;">Sitemap</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+      <div>
+        <h3 style="font-family:var(--ff-display); font-size:16px; font-weight:700; color:var(--copper); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px;">Main Sections</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="#home" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid); transition:color 0.2s;">Home</a></li>
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Programs &amp; Lessons</a></li>
+          <li><a href="#about" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">About David LeMair</a></li>
+          <li><a href="#testimonials" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Student Reviews</a></li>
+          <li><a href="#pricing" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Pricing &amp; Packages</a></li>
+          <li><a href="#tournaments" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Tournament Schedule</a></li>
+          <li><a href="#faq" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">FAQ &amp; AI Assistant</a></li>
+          <li><a href="#location" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Service Area</a></li>
+          <li><a href="#book" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Book a Lesson</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:var(--ff-display); font-size:16px; font-weight:700; color:var(--copper); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px;">Lesson Types</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Private Lessons</a></li>
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Semi-Private Lessons</a></li>
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Group Clinics</a></li>
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">Junior Programs</a></li>
+          <li><a href="#services" onclick="closeModal()" style="font-size:14px; color:var(--ink-mid);">USTA Match Prep</a></li>
+        </ul>
+        <h3 style="font-family:var(--ff-display); font-size:16px; font-weight:700; color:var(--copper); text-transform:uppercase; letter-spacing:0.1em; margin:24px 0 14px;">Legal</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="#" onclick="openModal('privacy'); return false;" style="font-size:14px; color:var(--ink-mid);">Privacy Policy</a></li>
+          <li><a href="#" onclick="openModal('terms'); return false;" style="font-size:14px; color:var(--ink-mid);">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
   <script>
+    /* ── Legal modals ── */
+    function openModal(type) {
+      const modal = document.getElementById('legalModal');
+      const content = document.getElementById('legalModalContent');
+      const tpl = document.getElementById('tpl-' + type);
+      content.innerHTML = tpl.innerHTML;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('legalModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function closeModalOutside(e) {
+      if (e.target === document.getElementById('legalModal')) closeModal();
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
     /* ── Nav scroll ── */
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
@@ -2377,7 +2477,7 @@
 
     /* ── AI Agent (demo) ── */
     const faqAnswers = {
-      'book':     "Just fill out the form at the top of this page, or call/text David at (571) 555-0100. No commitment needed — David will confirm within a few hours!",
+      'book':     "Just fill out the form at the top of this page, or call/text David at (703) 862-8702. No commitment needed — David will confirm within a few hours!",
       'price':    "Private: $85/lesson (single), $75 (5-pack), $70 (10-pack). Semi-private: $55/person. Group clinic: starting at $45/person. Junior clinic: $30/child.",
       'group':    "Yes! Group clinics run with 3–6 players starting at $45/person per session. Skill-matched groups for all levels, plus junior clinics (ages 6–17) at $30/child.",
       'child':    "Kids as young as 4 can start! David uses age-appropriate foam balls and mini-courts for young children. Most kids love it immediately and progress quickly.",
@@ -2392,7 +2492,7 @@
       for (const [k, v] of Object.entries(faqAnswers)) {
         if (q.includes(k)) return v;
       }
-      return "Great question! For the most accurate answer call or text David at (571) 555-0100, or book your first lesson and ask in person. We're happy to help!";
+      return "Great question! For the most accurate answer call or text David at (703) 862-8702, or book your first lesson and ask in person. We're happy to help!";
     }
 
     function addBubble(text, isUser) {
@@ -2424,7 +2524,7 @@
     });
 
     function startVoice() {
-      alert("Voice AI active! For now, call or text David directly at (571) 555-0100. Paste your GHL Voice AI widget code into the embed section to activate this feature.");
+      alert("Voice AI active! For now, call or text David directly at (703) 862-8702. Paste your GHL Voice AI widget code into the embed section to activate this feature.");
     }
 
     /* ── Tournament notify ── */
