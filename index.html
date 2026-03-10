@@ -2071,23 +2071,23 @@
       <div class="steps">
         <div class="step reveal">
           <div class="step__num">1</div>
-          <h3 class="step__title">Book Online</h3>
-          <p class="step__desc">Fill out the form above or text David directly. Pick your lesson type and a time that works for you.</p>
+          <h3 class="step__title">Simple Booking</h3>
+          <p class="step__desc">Fill out the form or text David directly to find a lesson time that fits your schedule.</p>
         </div>
         <div class="step reveal reveal-delay-1">
           <div class="step__num">2</div>
-          <h3 class="step__title">Free Assessment</h3>
-          <p class="step__desc">Your first session includes a complimentary skill assessment and a custom training roadmap.</p>
+          <h3 class="step__title">Growth Session</h3>
+          <p class="step__desc">Start with a relaxed skills chat on goals and map out a positive growth vision together.</p>
         </div>
         <div class="step reveal reveal-delay-2">
           <div class="step__num">3</div>
           <h3 class="step__title">Start Improving</h3>
-          <p class="step__desc">Hit the court and see real results. Most students notice major improvement within 3 sessions.</p>
+          <p class="step__desc">Hit the court and see real results. Most students notice major improvement within just three sessions.</p>
         </div>
         <div class="step reveal reveal-delay-3">
           <div class="step__num">4</div>
-          <h3 class="step__title">Track Progress</h3>
-          <p class="step__desc">Track milestones with skill-level benchmarks, match performance logs, and video comparisons showing your evolution over time.</p>
+          <h3 class="step__title">Track Your Wins</h3>
+          <p class="step__desc">Review your journey through helpful coaching conversations and video clips that show exactly how far you've come.</p>
         </div>
       </div>
     </div>
@@ -2622,7 +2622,7 @@
       </p>
       <div class="cta-banner__btns">
         <a href="#book" class="btn btn-chalk btn-lg">Book Your First Lesson</a>
-        <a href="tel:+15715550100" class="btn btn-ghost-copper-dark btn-lg">Call (703) 862-8702</a>
+        <a href="tel:+17038628702" class="btn btn-ghost-copper-dark btn-lg">Call (703) 862-8702</a>
         <a href="mailto:teresalemair@me.com" class="btn btn-ghost-copper-dark btn-lg">Email David</a>
       </div>
     </div>
@@ -2635,12 +2635,12 @@
         <div>
           <div class="footer__brand-name">David LeMair Tennis</div>
           <div class="footer__brand-tag">Annandale, Virginia · USPTA Certified</div>
-          <p class="footer__desc">Expert tennis instruction for players of all ages and skill levels across Annandale, VA and the greater Northern Virginia area.</p>
+          <p class="footer__desc">Expert tennis instruction for players of all ages and skill levels in Annandale, VA.</p>
           <div class="footer__contact-item">
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">📞</span>
-            <a href="tel:+15715550100" style="color:inherit;">(703) 862-8702</a>
+            <a href="tel:+17038628702" style="color:inherit;">(703) 862-8702</a>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">✉️</span>
@@ -2922,6 +2922,10 @@
       .then(() => {
         btn.textContent = '✓ Request Sent! David will contact you shortly.';
         btn.style.background = 'var(--forest)';
+        btn.style.fontSize = '11px';
+        btn.style.letterSpacing = '0.02em';
+        btn.style.whiteSpace = 'normal';
+        btn.style.lineHeight = '1.3';
       })
       .catch(() => {
         btn.textContent = 'Something went wrong — please call (703) 862-8702';
@@ -2948,6 +2952,16 @@
         this.classList.add('selected');
         document.getElementById('leadSource').value = this.dataset.value;
       });
+    });
+
+    /* ── Hide #book URL on hover ── */
+    document.querySelectorAll('a[href="#book"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+      });
+      a.addEventListener('mouseenter', () => a.removeAttribute('href'));
+      a.addEventListener('mouseleave', () => a.setAttribute('href', '#book'));
     });
 
     /* ── Hamburger ── */
