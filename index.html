@@ -778,6 +778,78 @@
     }
     .hero__form select { cursor: pointer; }
 
+    .hero__form-field { display: flex; flex-direction: column; gap: 4px; }
+    .hero__form-hint {
+      font-size: 10px;
+      color: var(--mist);
+      padding-left: 2px;
+    }
+
+    /* Child row — animated reveal */
+    .hero__form-child-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.35s var(--ease-out), opacity 0.3s ease, margin 0.3s ease;
+      margin-top: 0;
+    }
+    .hero__form-child-row.visible {
+      max-height: 80px;
+      opacity: 1;
+      margin-top: 0;
+    }
+    .hero__form-child-row input {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--ff-body);
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1.5px solid var(--border-lt);
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hero__form-child-row input:focus {
+      border-color: var(--copper);
+      box-shadow: 0 0 0 3px rgba(184,114,30,0.12);
+    }
+
+    /* Lead source chips */
+    .hero__form-chips-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--mist);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .hero__form-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+    .hero__form-chip {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-family: var(--ff-body);
+      font-weight: 500;
+      color: var(--ink-mid);
+      background: transparent;
+      border: 1.5px solid var(--border-lt);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .hero__form-chip.selected {
+      background: var(--copper);
+      border-color: var(--copper);
+      color: var(--chalk);
+    }
+    .hero__form-chip:hover:not(.selected) {
+      border-color: var(--copper-lt);
+      color: var(--copper);
+    }
+
     /* ══════════════════════════════════════════════
        STATS BAR
     ══════════════════════════════════════════════ */
@@ -1843,29 +1915,45 @@
           <!-- Booking card -->
           <div class="hero__card reveal reveal-delay-2" id="book">
             <div class="hero__card-title">Reserve Your First Lesson</div>
-            <p class="hero__card-sub">No credit card required. Spots fill fast — reserve yours today.</p>
+            <p class="hero__card-sub">Serving Annandale &amp; Idylwood, VA · No credit card required.</p>
             <form class="hero__form" id="bookingForm" onsubmit="handleBooking(event)">
+              <!-- Row 1: Name -->
               <div class="hero__form-row">
-                <input type="text" name="firstName" placeholder="First Name" required />
-                <input type="text" name="lastName" placeholder="Last Name" required />
+                <input type="text" name="first_name" placeholder="First Name" required />
+                <input type="text" name="last_name" placeholder="Last Name" required />
               </div>
-              <input type="email" name="email" placeholder="Email Address" required />
-              <input type="tel" name="phone" placeholder="Phone Number" required />
-              <input type="text" name="playerName" placeholder="Player's Name" required />
-              <select name="interest" required>
+              <!-- Row 2: Phone + Email -->
+              <div class="hero__form-row">
+                <div class="hero__form-field">
+                  <input type="tel" name="phone" placeholder="(703) 555-1234" required />
+                  <span class="hero__form-hint">Format: (XXX) XXX-XXXX</span>
+                </div>
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <!-- Row 3: Interested in -->
+              <select name="interested_in" id="interestedIn" required>
                 <option value="" disabled selected>I'm interested in...</option>
-                <option>Private Lesson (1-on-1)</option>
-                <option>Semi-Private Lesson (2 players)</option>
-                <option>Junior Program (under 18)</option>
+                <option>Private Lesson (Adult)</option>
+                <option>Private Lesson (Youth)</option>
+                <option>Semi-Private (2 players)</option>
+                <option>Group Clinic (3–6 players)</option>
               </select>
-              <select name="skillLevel" required>
-                <option value="" disabled selected>My skill level</option>
-                <option>Complete Beginner</option>
-                <option>Beginner (some experience)</option>
-                <option>Intermediate (NTRP 3.0–3.5)</option>
-                <option>Advanced (NTRP 4.0+)</option>
-              </select>
-              <button type="submit" class="btn btn-copper btn-lg" style="width:100%;">
+              <!-- Row 4: Child details (Youth only) -->
+              <div class="hero__form-child-row" id="childRow">
+                <input type="text" name="child_name" placeholder="Child's Name" />
+                <input type="number" name="child_age" placeholder="Child's Age" min="4" max="17" />
+              </div>
+              <!-- Row 5: Lead source chips -->
+              <div>
+                <div class="hero__form-chips-label">How did you hear about us?</div>
+                <div class="hero__form-chips">
+                  <button type="button" class="hero__form-chip" data-value="Referral">Referral</button>
+                  <button type="button" class="hero__form-chip" data-value="Search">Search</button>
+                  <button type="button" class="hero__form-chip" data-value="Social Media">Social Media</button>
+                </div>
+                <input type="hidden" id="leadSource" name="lead_source" />
+              </div>
+              <button type="submit" class="btn btn-copper btn-lg" style="width:100%;margin-top:4px;">
                 Reserve My Lesson →
               </button>
             </form>
@@ -2814,14 +2902,16 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
+      const isYouth = form.interested_in.value === 'Private Lesson (Youth)';
       const data = {
-        firstName:  form.firstName.value,
-        lastName:   form.lastName.value,
-        email:      form.email.value,
-        phone:      form.phone.value,
-        playerName: form.playerName.value,
-        interest:   form.interest.value,
-        skillLevel: form.skillLevel.value,
+        first_name:   form.first_name.value,
+        last_name:    form.last_name.value,
+        phone:        form.phone.value,
+        email:        form.email.value,
+        interested_in: form.interested_in.value,
+        child_name:   isYouth ? form.child_name.value : '',
+        child_age:    isYouth ? form.child_age.value  : '',
+        lead_source:  form.lead_source.value,
       };
 
       fetch('https://services.leadconnectorhq.com/hooks/YBRZyZ5mSnV8lIZ6dAJS/webhook-trigger/DS11txWbzkghAGGiGkFQ', {
@@ -2839,6 +2929,26 @@
         btn.disabled = false;
       });
     }
+
+    /* ── Youth reveal ── */
+    document.getElementById('interestedIn').addEventListener('change', function() {
+      const childRow = document.getElementById('childRow');
+      const isYouth  = this.value === 'Private Lesson (Youth)';
+      childRow.classList.toggle('visible', isYouth);
+      childRow.querySelectorAll('input').forEach(i => {
+        i.required = isYouth;
+        if (!isYouth) i.value = '';
+      });
+    });
+
+    /* ── Lead source chips ── */
+    document.querySelectorAll('.hero__form-chip').forEach(chip => {
+      chip.addEventListener('click', function() {
+        document.querySelectorAll('.hero__form-chip').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById('leadSource').value = this.dataset.value;
+      });
+    });
 
     /* ── Hamburger ── */
     document.getElementById('hamburger').addEventListener('click', function() {
