@@ -649,7 +649,7 @@
 
     .hero__grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.3fr 0.7fr;
       gap: 72px;
       align-items: center;
       width: 100%;
@@ -727,17 +727,19 @@
 
     /* ── Booking card ── */
     .hero__card {
-      background: var(--chalk);
+      background: var(--cream);
       border-radius: 6px;
-      padding: 40px 36px;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+      padding: 36px 30px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(154,92,18,0.12);
       position: relative;
+      max-width: 420px;
+      margin-left: auto;
     }
     .hero__card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 3px;
+      height: 5px;
       background: linear-gradient(90deg, var(--copper) 0%, var(--copper-lt) 100%);
       border-radius: 6px 6px 0 0;
     }
@@ -1849,6 +1851,7 @@
               </div>
               <input type="email" name="email" placeholder="Email Address" required />
               <input type="tel" name="phone" placeholder="Phone Number" required />
+              <input type="text" name="playerName" placeholder="Player's Name" required />
               <select name="interest" required>
                 <option value="" disabled selected>I'm interested in...</option>
                 <option>Private Lesson (1-on-1)</option>
@@ -2816,6 +2819,7 @@
         lastName:   form.lastName.value,
         email:      form.email.value,
         phone:      form.phone.value,
+        playerName: form.playerName.value,
         interest:   form.interest.value,
         skillLevel: form.skillLevel.value,
       };
