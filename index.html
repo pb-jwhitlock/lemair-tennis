@@ -1923,10 +1923,7 @@
                 <input type="text" name="last_name" placeholder="Last Name" required />
               </div>
               <!-- Row 2: Phone -->
-              <div class="hero__form-field">
-                <input type="tel" name="phone" placeholder="Phone  (703) 555-1234" required />
-                <span class="hero__form-hint">Format: (XXX) XXX-XXXX</span>
-              </div>
+              <input type="tel" name="phone" id="phoneInput" placeholder="Phone (XXX) XXX-XXXX" required />
               <!-- Row 3: Email -->
               <input type="email" name="email" placeholder="Email Address" required />
               <!-- Row 3: Interested in -->
@@ -2932,6 +2929,16 @@
         btn.disabled = false;
       });
     }
+
+    /* ── Phone format enforcer ── */
+    document.getElementById('phoneInput').addEventListener('input', function() {
+      let digits = this.value.replace(/\D/g, '').slice(0, 10);
+      let formatted = '';
+      if (digits.length > 0) formatted = '(' + digits.slice(0, 3);
+      if (digits.length >= 4) formatted += ') ' + digits.slice(3, 6);
+      if (digits.length >= 7) formatted += '-' + digits.slice(6, 10);
+      this.value = formatted;
+    });
 
     /* ── Youth reveal ── */
     document.getElementById('interestedIn').addEventListener('change', function() {
