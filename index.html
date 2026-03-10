@@ -1842,25 +1842,30 @@
           <div class="hero__card reveal reveal-delay-2" id="book">
             <div class="hero__card-title">Reserve Your First Lesson</div>
             <p class="hero__card-sub">No credit card required. Spots fill fast — reserve yours today.</p>
-            <div style="width:100%;min-height:522px;">
-              <iframe
-                src="https://auth.pointsbeyond.ai/widget/form/RhsVXfBjtYGr5sVKijGc"
-                style="width:100%;height:522px;border:none;border-radius:4px;"
-                id="inline-RhsVXfBjtYGr5sVKijGc"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Lead Generation"
-                data-height="522"
-                data-layout-iframe-id="inline-RhsVXfBjtYGr5sVKijGc"
-                data-form-id="RhsVXfBjtYGr5sVKijGc"
-                title="Lead Generation"
-              ></iframe>
-            </div>
+            <form class="hero__form" id="bookingForm" onsubmit="handleBooking(event)">
+              <div class="hero__form-row">
+                <input type="text" name="firstName" placeholder="First Name" required />
+                <input type="text" name="lastName" placeholder="Last Name" required />
+              </div>
+              <input type="email" name="email" placeholder="Email Address" required />
+              <input type="tel" name="phone" placeholder="Phone Number" required />
+              <select name="interest" required>
+                <option value="" disabled selected>I'm interested in...</option>
+                <option>Private Lesson (1-on-1)</option>
+                <option>Semi-Private Lesson (2 players)</option>
+                <option>Junior Program (under 18)</option>
+              </select>
+              <select name="skillLevel" required>
+                <option value="" disabled selected>My skill level</option>
+                <option>Complete Beginner</option>
+                <option>Beginner (some experience)</option>
+                <option>Intermediate (NTRP 3.0–3.5)</option>
+                <option>Advanced (NTRP 4.0+)</option>
+              </select>
+              <button type="submit" class="btn btn-copper btn-lg" style="width:100%;">
+                Reserve My Lesson →
+              </button>
+            </form>
             <p style="font-size:11px; color:var(--mist); text-align:center; margin-top:12px;">
               By submitting you agree to be contacted. No spam, ever.
             </p>
@@ -2801,12 +2806,34 @@
     /* ── Booking form ── */
     function handleBooking(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = '✓ Request Sent! David will contact you shortly.';
-      btn.style.background = 'var(--forest)';
+      const form = e.target;
+      const btn  = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
       btn.disabled = true;
-      // TODO: POST to GHL webhook
-      // fetch('/api/booking', { method: 'POST', body: new FormData(e.target) });
+
+      const data = {
+        firstName:  form.firstName.value,
+        lastName:   form.lastName.value,
+        email:      form.email.value,
+        phone:      form.phone.value,
+        interest:   form.interest.value,
+        skillLevel: form.skillLevel.value,
+      };
+
+      fetch('https://services.leadconnectorhq.com/hooks/YBRZyZ5mSnV8lIZ6dAJS/webhook-trigger/DS11txWbzkghAGGiGkFQ', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      .then(() => {
+        btn.textContent = '✓ Request Sent! David will contact you shortly.';
+        btn.style.background = 'var(--forest)';
+      })
+      .catch(() => {
+        btn.textContent = 'Something went wrong — please call (703) 862-8702';
+        btn.style.background = '#c0392b';
+        btn.disabled = false;
+      });
     }
 
     /* ── Hamburger ── */
@@ -2834,7 +2861,6 @@
       });
     });
   </script>
-  <script src="https://auth.pointsbeyond.ai/js/form_embed.js"></script>
   <script
     src="https://auth.pointsbeyond.ai/js/external-tracking.js"
     data-tracking-id="tk_bd3d0364727d44ea98d27d3511f3b57d"
