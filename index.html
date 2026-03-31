@@ -262,7 +262,7 @@
       {
         "@type": "Question",
         "name": "Where do David LeMair tennis lessons take place?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts. Public court fees are not included in lesson pricing." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Lessons are held at local courts throughout Fairfax, Falls Church, and Annandale, VA. Public court fees are not included in lesson pricing." }
       },
       {
         "@type": "Question",
@@ -377,7 +377,7 @@
       margin: 0 auto;
       padding: 0 32px;
     }
-    .section { padding: 100px 0; }
+    .section { padding: 56px 0; }
     .section--cream { background: var(--cream); }
     .section--forest { background: var(--forest); color: var(--chalk); }
     .section--ink { background: var(--ink); color: var(--chalk); }
@@ -1755,7 +1755,8 @@
       .footer__grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
-      .section { padding: 72px 0; }
+      .section { padding: 36px 0; }
+      .hero__content { padding-top: 46px; }
       .services__grid,
       .testimonials__grid,
       .pricing__grid,
@@ -1867,7 +1868,7 @@
           <!-- Booking card -->
           <div class="hero__card reveal reveal-delay-2" id="book">
             <div class="hero__card-title">Let's Find the Right Program for You</div>
-            <p class="hero__card-sub" style="font-size:14px; color:var(--mist); text-align:center; margin-bottom:14px;">Get a Personalized Coaching Plan — No Commitment</p>
+            <p class="hero__card-sub" style="font-size:14px; color:var(--mist); text-align:center; margin-bottom:14px;"><span style="display:block;text-align:center;">Get a Personalized Coaching Plan</span><span style="display:block;text-align:center;">No Commitment</span></p>
             <form class="hero__form" id="bookingForm" onsubmit="handleBooking(event)">
               <!-- Row 1: Name -->
               <div class="hero__form-row">
@@ -2223,7 +2224,7 @@
                 <span class="faq__icon">+</span>
               </button>
               <div class="faq__a">
-                <div class="faq__a-inner">Primarily at Jefferson District Park, Mason District Park, and other Annandale, VA courts. Public court fees are not included in lesson pricing.</div>
+                <div class="faq__a-inner">At local courts throughout Fairfax, Falls Church, and Annandale, VA. Public court fees are not included in lesson pricing.</div>
               </div>
             </div>
             <div class="faq__item">
@@ -2324,16 +2325,11 @@
           <p style="font-size:15px; color:var(--ink-mid); line-height:1.8; margin-bottom:24px;">
             Serving Fairfax, Falls Church, Annandale, and Northern VA — David coaches players right in the community at local courts that are convenient and familiar to you.
           </p>
-          <div class="local__tags">
-            <span class="local__tag">Jefferson District Park</span>
-            <span class="local__tag">Mason District Park</span>
-          </div>
-          <a href="#book" class="btn btn-copper btn-lg">Book a Lesson Near You</a>
         </div>
 
         <div class="local__map reveal reveal-delay-1">
           <iframe
-            src="https://maps.google.com/maps?q=INOVA+Fairfax+Medical+Campus,+3300+Gallows+Rd,+Falls+Church,+VA+22042&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=38.868,-77.171&z=13&output=embed"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="David LeMair Tennis - Northern Virginia service area">
           </iframe>
