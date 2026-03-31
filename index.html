@@ -1537,12 +1537,11 @@
       align-items: center;
     }
     .local__map {
-      aspect-ratio: 4/3;
+      height: 380px;
       border-radius: 4px;
       overflow: hidden;
       border: 1px solid var(--border-lt);
     }
-    .local__map iframe { width: 100%; height: 100%; border: none; }
     .local__tags {
       display: flex;
       flex-wrap: wrap;
@@ -1765,6 +1764,7 @@
       .steps::before { display: none; }
       .faq__grid { grid-template-columns: 1fr; }
       .local__grid { grid-template-columns: 1fr; }
+      .local__map { height: 280px; }
       .nav__links, .nav__cta { display: none; }
       .nav__hamburger { display: flex; }
       .hero__form-row { grid-template-columns: 1fr; }
@@ -2328,11 +2328,103 @@
         </div>
 
         <div class="local__map reveal reveal-delay-1">
-          <iframe
-            src="https://maps.google.com/maps?q=38.868,-77.171&z=13&output=embed"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="David LeMair Tennis - Northern Virginia service area">
-          </iframe>
+          <!-- Inline SVG map — Northern Virginia service area
+               Bounds: Lat 38.82–38.96, Lng -77.32 to -77.07
+               x = (lng + 77.32) / 0.25 * 700
+               y = (38.96 - lat) / 0.14 * 380 -->
+          <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg"
+               width="100%" height="100%" preserveAspectRatio="xMidYMid slice"
+               role="img" aria-label="Northern Virginia service area map showing I-495, I-66, Route 50, Route 29 and service area pin"
+               style="display:block;">
+
+            <!-- Background -->
+            <rect width="700" height="380" fill="#eae5d9"/>
+
+            <!-- Inside-Beltway zone tint (east of I-495) -->
+            <polygon
+              points="378,380 336,331 302,293 280,263 258,228 241,193 230,157 216,119 202,81 179,33 700,33 700,380"
+              fill="rgba(195,215,205,0.30)" stroke="none"/>
+
+            <!-- ── ROAD CASINGS (wider, muted) ──────────────── -->
+            <!-- I-495 casing -->
+            <path d="M378,380 L336,331 L302,293 L280,263 L258,228 L241,193 L230,157 L216,119 L202,81 L179,33"
+                  stroke="#a8bdb3" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- I-66 casing -->
+            <path d="M0,188 L100,190 L180,192 L241,193 L380,192 L520,191 L700,191"
+                  stroke="#a8bdb3" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <!-- Rt 50 casing -->
+            <path d="M0,274 L120,274 L280,274 L420,277 L588,283 L700,285"
+                  stroke="#c0c8c2" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- Rt 29 casing -->
+            <path d="M644,163 L448,231 L347,280 L238,326 L84,358"
+                  stroke="#c0c8c2" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- ── ROADS ─────────────────────────────────────── -->
+            <!-- I-495 (Capital Beltway) -->
+            <path d="M378,380 L336,331 L302,293 L280,263 L258,228 L241,193 L230,157 L216,119 L202,81 L179,33"
+                  stroke="#163524" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- I-66 -->
+            <path d="M0,188 L100,190 L180,192 L241,193 L380,192 L520,191 L700,191"
+                  stroke="#163524" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Route 50 -->
+            <path d="M0,274 L120,274 L280,274 L420,277 L588,283 L700,285"
+                  stroke="#2c4034" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Route 29 -->
+            <path d="M644,163 L448,231 L347,280 L238,326 L84,358"
+                  stroke="#2c4034" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- ── HIGHWAY SHIELDS ─────────────────────────── -->
+            <!-- I-66 (west label) -->
+            <rect x="42" y="177" width="42" height="20" rx="4" fill="#1e3a8a"/>
+            <text x="63" y="191" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="'DM Sans',system-ui,sans-serif">I-66</text>
+
+            <!-- I-66 (east label) -->
+            <rect x="582" y="179" width="42" height="20" rx="4" fill="#1e3a8a"/>
+            <text x="603" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="'DM Sans',system-ui,sans-serif">I-66</text>
+
+            <!-- I-495 (south label) -->
+            <rect x="318" y="314" width="48" height="20" rx="4" fill="#1e3a8a"/>
+            <text x="342" y="328" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="'DM Sans',system-ui,sans-serif">I-495</text>
+
+            <!-- I-495 (north label) -->
+            <rect x="182" y="92" width="48" height="20" rx="4" fill="#1e3a8a"/>
+            <text x="206" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="'DM Sans',system-ui,sans-serif">I-495</text>
+
+            <!-- Rt 50 shield (circle) -->
+            <circle cx="150" cy="261" r="13" fill="#f5f5f5" stroke="#2c4034" stroke-width="1.5"/>
+            <text x="150" y="255" text-anchor="middle" font-size="7" font-weight="600" fill="#2c4034" font-family="'DM Sans',system-ui,sans-serif">RT</text>
+            <text x="150" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#2c4034" font-family="'DM Sans',system-ui,sans-serif">50</text>
+
+            <!-- Rt 29 shield (circle) -->
+            <circle cx="626" cy="149" r="13" fill="#f5f5f5" stroke="#2c4034" stroke-width="1.5"/>
+            <text x="626" y="143" text-anchor="middle" font-size="7" font-weight="600" fill="#2c4034" font-family="'DM Sans',system-ui,sans-serif">RT</text>
+            <text x="626" y="153" text-anchor="middle" font-size="10" font-weight="700" fill="#2c4034" font-family="'DM Sans',system-ui,sans-serif">29</text>
+
+            <!-- ── CITY LABELS ─────────────────────────────── -->
+            <text x="196" y="148" text-anchor="middle" font-size="9" fill="#5a7060" font-family="'DM Sans',system-ui,sans-serif" letter-spacing="0.06em">TYSONS</text>
+            <text x="196" y="159" text-anchor="middle" font-size="9" fill="#5a7060" font-family="'DM Sans',system-ui,sans-serif" letter-spacing="0.06em">CORNER</text>
+
+            <text x="395" y="228" text-anchor="middle" font-size="9" fill="#5a7060" font-family="'DM Sans',system-ui,sans-serif" letter-spacing="0.06em">FALLS CHURCH</text>
+
+            <text x="510" y="332" text-anchor="middle" font-size="9" fill="#5a7060" font-family="'DM Sans',system-ui,sans-serif" letter-spacing="0.06em">ANNANDALE</text>
+
+            <!-- ── SERVICE AREA PIN (38.849, -77.171) = (417, 301) ── -->
+            <!-- Glow halo -->
+            <circle cx="417" cy="301" r="14" fill="rgba(204,26,0,0.12)"/>
+            <!-- Star -->
+            <text x="417" y="312" text-anchor="middle" font-size="26" fill="#cc1a00"
+                  font-family="'DM Sans',system-ui,sans-serif">★</text>
+            <!-- Label pill -->
+            <rect x="372" y="320" width="90" height="18" rx="4" fill="rgba(255,255,255,0.92)"/>
+            <text x="417" y="332" text-anchor="middle" font-size="10" font-weight="600" fill="#0d2016"
+                  font-family="'DM Sans',system-ui,sans-serif" letter-spacing="0.08em">SERVICE AREA</text>
+
+            <!-- ── NORTH INDICATOR ─────────────────────────── -->
+            <text x="672" y="366" text-anchor="middle" font-size="11" fill="#8fa898" font-family="sans-serif">N ↑</text>
+
+            <!-- Outer border -->
+            <rect width="700" height="380" fill="none" stroke="#d0c8bc" stroke-width="1.5"/>
+          </svg>
         </div>
       </div>
     </div>
