@@ -2317,16 +2317,9 @@
                 <input class="agent-card__input" type="text" placeholder="Ask anything..." id="agentInput" />
                 <button class="agent-card__send" onclick="sendMsg()" aria-label="Send">›</button>
               </div>
-              <button class="agent-card__voice" onclick="startVoice()">🎙 Talk to Ace — Voice AI</button>
 
-              <!-- ═══ GO HIGH LEVEL VOICE AI EMBED ═══
-                   Replace the div below with your GHL voice widget embed code.
-                   In Go High Level: Settings → Integrations → Voice AI Widget → Copy Embed Code -->
-              <div class="agent-card__ghl" id="ghlWidget">
-                <!-- PASTE GHL VOICE AI EMBED CODE HERE -->
-                <strong>Voice AI Widget</strong>
-                <p>Paste your Go High Level voice AI embed code above to activate live voice conversations</p>
-              </div>
+
+
             </div>
           </div>
         </div>
@@ -2674,7 +2667,7 @@
 
     /* ── AI Agent (demo) ── */
     const faqAnswers = {
-      'book':     "Just fill out the form at the top of this page, or call/text David at (703) 862-8702. No commitment needed — David will confirm within a few hours!",
+      'book':     "Just fill out the information request form at the top of this page, or call or text us at (703) 862-8702. You will be contacted within 24 hours!",
       'price':    "Contact David directly for current rates — call or text (703) 862-8702 or email davidlemairtennis@gmail.com.",
       'group':    "Yes! Group clinics run with 3–7 players. Skill-matched groups for all levels, plus junior clinics (ages 6–17).",
       'child':    "Kids as young as 4 can start! David uses age-appropriate foam balls and mini-courts for young children. Most kids love it immediately and progress quickly.",
@@ -2716,12 +2709,13 @@
       setTimeout(() => addBubble(getReply(q), false), 700);
     }
 
+    document.getElementById('agentInput').focus();
     document.getElementById('agentInput').addEventListener('keydown', e => {
       if (e.key === 'Enter') sendMsg();
     });
 
     function startVoice() {
-      alert("Voice AI active! For now, call or text David directly at (703) 862-8702. Paste your GHL Voice AI widget code into the embed section to activate this feature.");
+      alert("Please call LeMair Tennis directly at 703-862-8702.");
     }
 
     /* ── Tournament notify ── */
