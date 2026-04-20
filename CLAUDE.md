@@ -57,6 +57,7 @@ Live site: https://pb-jwhitlock.github.io/lemair-tennis
 - **Major content/copy refresh**: David backhand photo added to About section; credentials updated to "Former Touring Pro and NCAA DI Player"; FAQ rain policy replaced cancellation policy; group clinic age range removed; testimonials rewritten (5 of 6) for natural GBP-style voice
 - **Tournament section**: Boys/Girls Singles renamed to L7/L6 Events; NTRP added to adult cards; digit rendering fixed (lining-nums); section reordered so Tournament Schedule precedes Tournaments FAQ
 - **Schema + Ace alignment**: SportsEvent descriptions, FAQ schema answers, service area phrasing, and Ace chatbot answers all aligned to match visible site content; .gitignore updated to exclude .DS_Store and local HTML backups
+- **FAQ cleanup**: Removed "Have a question? Ask the AI assistant or browse the answers below." subtitle from the FAQ section header
 
 ## Next Steps (resume here)
 1. Get Go High Level voice AI embed code from David → replace placeholder in `index.html`
