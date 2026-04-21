@@ -53,12 +53,10 @@ Live site: https://pb-jwhitlock.github.io/lemair-tennis
 - "USTA tennis lessons Northern Virginia"
 - AEO: "how much do tennis lessons cost in Annandale VA"
 
-## Last Session Summary (2026-04-20)
-- **Major content/copy refresh**: David backhand photo added to About section; credentials updated to "Former Touring Pro and NCAA DI Player"; FAQ rain policy replaced cancellation policy; group clinic age range removed; testimonials rewritten (5 of 6) for natural GBP-style voice
-- **Tournament section**: Boys/Girls Singles renamed to L7/L6 Events; NTRP added to adult cards; digit rendering fixed (lining-nums); section reordered so Tournament Schedule precedes Tournaments FAQ
-- **Schema + Ace alignment**: SportsEvent descriptions, FAQ schema answers, service area phrasing, and Ace chatbot answers all aligned to match visible site content; .gitignore updated to exclude .DS_Store and local HTML backups
+## Last Session Summary (2026-04-21)
 - **FAQ cleanup**: Removed subtitle line and `border-top` dividing line below the "Frequently Asked Questions" heading
 - **About section**: Reordered credentials — "Former Touring Pro and NCAA DI Player" moved to 4th/final bullet (after Junior Development Specialist)
+- **Tournament location copy**: Updated section subtitle and FAQ schema answer to say "Annandale and Falls Church, VA" (SportsEvent schema entries tied to Jefferson District Park left as Annandale-only)
 
 ## Next Steps (resume here)
 1. Get Go High Level voice AI embed code from David → replace placeholder in `index.html`
