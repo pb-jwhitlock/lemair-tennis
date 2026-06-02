@@ -76,3 +76,7 @@ Live site: https://pb-jwhitlock.github.io/lemair-tennis
 - [ ] Add 2026 tournament schedule dates
 - [ ] Tournament email notification signup
 - [ ] Any content or SEO updates from client
+
+## Skills Library
+Repo: https://github.com/pb-jwhitlock/claude-skills
+To load a skill, share the raw URL or paste the SKILL.md content at the start of the session.
