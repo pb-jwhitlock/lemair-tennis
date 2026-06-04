@@ -44,18 +44,6 @@
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/1950EEAB-1D31-4816-8136-1FA08010EA92"
         },
         {
-          "id": "jul-04-l6",
-          "startDate": "2026-07-04",
-          "endDate": "2026-07-05",
-          "dateLabel": "Jul 4–5",
-          "level": "L6",
-          "name": "L6 Junior Open",
-          "ageGroups": "BG 12–18",
-          "format": "Singles",
-          "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98"
-        },
-        {
           "id": "jul-04-l7",
           "startDate": "2026-07-04",
           "endDate": "2026-07-05",
@@ -176,28 +164,16 @@
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/0ECFD0D1-430B-48E6-B2A6-B79939AC0A0E"
         },
         {
-          "id": "oct-31-l7-a",
+          "id": "oct-31-l6-jr",
           "startDate": "2026-10-31",
           "endDate": "2026-11-01",
           "dateLabel": "Oct 31–Nov 1",
-          "level": "L7",
-          "name": "L7 Junior Open",
-          "ageGroups": "BG 12–18",
+          "level": "L6",
+          "name": "L6 Junior Open",
+          "ageGroups": "BG 14–18",
           "format": "Singles",
           "venue": "Jefferson District Park",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/153E288B-91C9-486F-80CA-7EF0C45EB0D5"
-        },
-        {
-          "id": "oct-31-l7-b",
-          "startDate": "2026-10-31",
-          "endDate": "2026-11-01",
-          "dateLabel": "Oct 31–Nov 1",
-          "level": "L7",
-          "name": "L7 Junior Open",
-          "ageGroups": "BG 12–18",
-          "format": "Singles",
-          "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/638F6AC7-5A49-4BE1-8E58-FEC86999AC76"
         },
         {
           "id": "nov-01-jrc",
@@ -222,18 +198,6 @@
           "format": "Singles",
           "venue": "Jefferson District Park",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/BC410CB8-1C12-4D53-802E-08B44F7380DC"
-        },
-        {
-          "id": "nov-15-l6",
-          "startDate": "2026-11-15",
-          "endDate": "2026-11-15",
-          "dateLabel": "Nov 15",
-          "level": "L6",
-          "name": "L6 Junior Open",
-          "ageGroups": "BG 12–18",
-          "format": "Singles",
-          "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3D3BB1C5-3178-4548-9AF2-6E1AA514F2C9"
         },
         {
           "id": "nov-15-l7",
@@ -324,11 +288,47 @@
           "format": "Men's & Women's Singles",
           "venue": "Jefferson District Park",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/E9C3905B-DD2B-4111-8BDC-9475A43FA7A0"
+        },
+        {
+          "id": "jul-04-l6-ad",
+          "startDate": "2026-07-04",
+          "endDate": "2026-07-05",
+          "dateLabel": "Jul 4–5",
+          "level": "L6",
+          "name": "L6 Adult Singles Open",
+          "ageGroups": "Open",
+          "format": "Men's & Women's Singles",
+          "venue": "Jefferson District Park",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98"
+        },
+        {
+          "id": "oct-31-l6-ad",
+          "startDate": "2026-10-31",
+          "endDate": "2026-11-01",
+          "dateLabel": "Oct 31–Nov 1",
+          "level": "L6",
+          "name": "L6 Adult Singles Open",
+          "ageGroups": "Open",
+          "format": "Men's & Women's Singles",
+          "venue": "Jefferson District Park",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/638F6AC7-5A49-4BE1-8E58-FEC86999AC76"
+        },
+        {
+          "id": "nov-15-l6-ad",
+          "startDate": "2026-11-15",
+          "endDate": "2026-11-15",
+          "dateLabel": "Nov 15",
+          "level": "L6",
+          "name": "L6 Adult Singles Open",
+          "ageGroups": "Open",
+          "format": "Men's & Women's Singles",
+          "venue": "Jefferson District Park",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3D3BB1C5-3178-4548-9AF2-6E1AA514F2C9"
         }
       ]
     }
   ],
   "ustaProfileUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments",
-  "lastUpdated": "2026-06-04",
+  "lastUpdated": "2026-06-04T12:00:00",
   "_note": "To add or update a USTA URL: paste the full playtennis.usta.com tournament link into the ustaUrl field for the matching event. Set to null when registration is not yet open."
 }
