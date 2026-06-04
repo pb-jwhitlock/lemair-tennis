@@ -2808,7 +2808,7 @@
               <span class="tourn-date">${ev.dateLabel}</span>
               <span class="${badgeClass(ev.level)}">${ev.level}</span>
               <span class="tourn-name">${ev.name}</span>
-              <span class="tourn-meta">${ev.ageGroups} · ${ev.format}</span>
+              <span class="tourn-meta">${ev.ageGroups} · ${ev.format}${ev.note ? `<br><span style="font-size:11px;color:rgba(247,243,235,0.35);font-style:italic;">${ev.note}</span>` : ''}</span>
               <span class="tourn-venue">${ev.venue}</span>
               <span class="tourn-event-btn">${btn}</span>
             </li>`;
