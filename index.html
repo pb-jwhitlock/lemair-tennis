@@ -1780,13 +1780,97 @@
       .hero__ctas .btn { width: 100%; }
       .cta-banner__btns { flex-direction: column; align-items: center; }
       .about__stats-row { grid-template-columns: 1fr 1fr; }
-      .tournament-grid { grid-template-columns: 1fr 1fr !important; }
     }
     @media (max-width: 768px) {
-      .tournament-grid { grid-template-columns: 1fr 1fr !important; }
     }
   
     .tournament-card-title { font-variant-numeric: lining-nums; font-feature-settings: "lnum"; }
+
+    /* ── Tournament dynamic section ── */
+    .tourn-cats { display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; margin-bottom:40px; }
+    @media(max-width:768px){ .tourn-cats { grid-template-columns:1fr; } }
+    .tourn-cat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-top: 3px solid var(--copper);
+      border-radius: 4px;
+      padding: 24px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+    }
+    .tourn-cat-card:hover { background: rgba(255,255,255,0.09); }
+    .tourn-cat-card.active {
+      border-color: var(--copper-lt);
+      border-top-color: var(--copper-lt);
+      background: rgba(188,114,40,0.12);
+    }
+    .tourn-cat-icon { font-size:26px; margin-bottom:10px; }
+    .tourn-cat-name { font-family:var(--ff-display); font-size:16px; font-weight:700; color:var(--chalk); margin-bottom:5px; }
+    .tourn-cat-div  { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:10px; }
+    .tourn-cat-desc { font-size:12px; color:rgba(247,243,235,0.5); line-height:1.6; }
+
+    /* Schedule panel */
+    .tourn-panel {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius:6px;
+      overflow:hidden;
+    }
+    .tourn-panel-header {
+      display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+      padding:20px 24px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .tourn-panel-title { font-family:var(--ff-display); font-size:18px; font-weight:700; color:var(--chalk); }
+    .tourn-panel-cta   { font-size:12px; color:rgba(247,243,235,0.5); }
+    .tourn-event-list  { list-style:none; margin:0; padding:0; }
+    .tourn-event-row {
+      display:grid;
+      grid-template-columns: 100px 56px 1fr 1fr 1fr auto;
+      align-items:center;
+      gap:12px;
+      padding:14px 24px;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+      transition: background 0.15s;
+    }
+    .tourn-event-row:last-child { border-bottom:none; }
+    .tourn-event-row:hover { background: rgba(255,255,255,0.04); }
+    @media(max-width:900px){
+      .tourn-event-row { grid-template-columns:1fr 1fr; gap:8px; padding:14px 18px; }
+      .tourn-event-row > * { min-width:0; }
+      .tourn-event-btn { grid-column:1/-1; }
+    }
+    @media(max-width:540px){
+      .tourn-event-row { grid-template-columns:1fr; }
+    }
+    .tourn-date   { font-size:13px; font-weight:600; color:var(--chalk); white-space:nowrap; }
+    .tourn-badge  {
+      display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.07em;
+      text-transform:uppercase; padding:3px 7px; border-radius:3px;
+      background:rgba(188,114,40,0.25); color:var(--copper-lt); border:1px solid rgba(188,114,40,0.4);
+      white-space:nowrap;
+    }
+    .tourn-badge--l4 { background:rgba(143,168,152,0.15); color:var(--mist); border-color:rgba(143,168,152,0.3); }
+    .tourn-badge--l6 { background:rgba(188,114,40,0.2); color:var(--copper-lt); border-color:rgba(188,114,40,0.35); }
+    .tourn-badge--l7 { background:rgba(247,243,235,0.08); color:rgba(247,243,235,0.7); border-color:rgba(247,243,235,0.15); }
+    .tourn-badge--jrc{ background:rgba(143,168,152,0.15); color:var(--mist); border-color:rgba(143,168,152,0.3); }
+    .tourn-name   { font-size:13px; color:var(--chalk); }
+    .tourn-meta   { font-size:12px; color:rgba(247,243,235,0.5); }
+    .tourn-venue  { font-size:12px; color:rgba(247,243,235,0.45); }
+    .tourn-empty  { padding:48px 24px; text-align:center; color:rgba(247,243,235,0.4); font-size:14px; }
+    .btn-register {
+      display:inline-block; padding:7px 14px;
+      font-family:var(--ff-body); font-size:12px; font-weight:600;
+      background:var(--copper); color:var(--chalk);
+      border:none; border-radius:3px; cursor:pointer; text-decoration:none;
+      white-space:nowrap; transition: background 0.2s;
+    }
+    .btn-register:hover { background:var(--copper-lt); }
+    .btn-register--soon {
+      background:transparent; color:rgba(247,243,235,0.35);
+      border:1px solid rgba(255,255,255,0.12); cursor:default; pointer-events:none;
+    }
   </style>
 </head>
 <body>
@@ -2365,61 +2449,18 @@
         <p class="section-sub">David LeMair hosts officially sanctioned USTA tournaments in Annandale and Falls Church, VA open to juniors and adults across numerous skill levels.</p>
       </div>
 
-      <!-- Tournament categories -->
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; margin-bottom:56px;" class="reveal tournament-grid">
+      <!-- Category cards — rendered by JS -->
+      <div id="tourn-cats" class="tourn-cats reveal"></div>
 
-        <!-- Card 1: L6, L7 and Jr C Events — double width -->
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-top:3px solid var(--copper); border-radius:4px; padding:28px 22px; text-align:center; transition:border-color 0.25s ease;">
-          <div style="font-size:28px; margin-bottom:12px;">🏆</div>
-          <div class="tournament-card-title" style="font-family:var(--ff-display); font-size:17px; font-weight:700; color:var(--chalk); margin-bottom:6px;">L6, L7 and Jr C Events</div>
-          <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:12px;">Junior Division</div>
-          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">Singles competition</div>
-        </div>
+      <!-- Schedule panel — rendered by JS -->
+      <div id="tourn-panel" class="tourn-panel reveal"></div>
 
-        <!-- Card 2: L4 Events -->
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-top:3px solid var(--copper); border-radius:4px; padding:28px 22px; text-align:center; transition:border-color 0.25s ease;">
-          <div style="font-size:28px; margin-bottom:12px;">🏆</div>
-          <div class="tournament-card-title" style="font-family:var(--ff-display); font-size:17px; font-weight:700; color:var(--chalk); margin-bottom:6px;">L4 Events</div>
-          <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:12px;">Junior Division</div>
-          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">Doubles and Mixed-Doubles competition</div>
-        </div>
-
-        <!-- Card 3: L6 Adult Singles -->
-        <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-top:3px solid var(--copper); border-radius:4px; padding:28px 22px; text-align:center; transition:border-color 0.25s ease;">
-          <div style="font-size:28px; margin-bottom:12px;">🏆</div>
-          <div class="tournament-card-title" style="font-family:var(--ff-display); font-size:17px; font-weight:700; color:var(--chalk); margin-bottom:6px;">L6 Adult Singles</div>
-          <div style="font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--copper-lt); margin-bottom:12px;">Adult Division</div>
-          <div style="font-size:13px; color:rgba(247,243,235,0.55); line-height:1.65;">NTRP 3.0–4.5</div>
-        </div>
-
-      </div>
-
-      <!-- Schedule placeholder -->
-      <div class="reveal" style="border:1.5px dashed rgba(255,255,255,0.15); border-radius:6px; padding:52px 40px; text-align:center; position:relative; overflow:hidden;">
-        <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%, rgba(184,114,30,0.08) 0%, transparent 65%); pointer-events:none;"></div>
-        <div style="position:relative; z-index:1;">
-          <div style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; background:rgba(184,114,30,0.15); border:1px solid rgba(184,114,30,0.35); margin:0 auto 20px;">
-            <span style="font-size:24px;">📅</span>
-          </div>
-          <h3 style="font-family:var(--ff-display); font-size:26px; font-weight:700; color:var(--chalk); margin-bottom:12px;">2026 Tournament Schedule Coming Soon</h3>
-          <p style="font-size:15px; color:rgba(247,243,235,0.55); max-width:520px; margin:0 auto 28px; line-height:1.75;">
-            Dates and registration details for all USTA-sanctioned events will be posted here once confirmed. Enter your email to be notified the moment registration opens.
-          </p>
-          <form onsubmit="handleTournamentNotify(event)" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:440px; margin:0 auto;">
-            <input
-              type="email"
-              placeholder="Your email address"
-              required
-              style="flex:1; min-width:200px; padding:12px 16px; background:rgba(255,255,255,0.08); border:1.5px solid rgba(255,255,255,0.15); border-radius:4px; font-family:var(--ff-body); font-size:14px; color:var(--chalk); outline:none;"
-              onfocus="this.style.borderColor='var(--copper-lt)'"
-              onblur="this.style.borderColor='rgba(255,255,255,0.15)'"
-            />
-            <button type="submit" class="btn btn-copper">Notify Me</button>
-          </form>
-          <p style="font-size:11px; color:rgba(247,243,235,0.3); margin-top:14px;">No spam. One email when the schedule is live.</p>
-        </div>
-      </div>
-
+      <!-- USTA profile link -->
+      <p style="text-align:center; margin-top:20px; font-size:13px; color:rgba(247,243,235,0.4);">
+        View all events on the
+        <a id="tourn-profile-link" href="https://playtennis.usta.com/davidlemairtennis0/Tournaments" target="_blank" rel="noopener"
+           style="color:var(--copper-lt); text-decoration:underline;">USTA tournament profile</a>.
+      </p>
     </div>
   </section>
   <section class="section section--cream" id="tournaments-faq">
@@ -2704,16 +2745,105 @@
       alert("Please call LeMair Tennis directly at 703-862-8702.");
     }
 
-    /* ── Tournament notify ── */
+    /* ── Tournament schedule ── */
+    (function() {
+      const DATA_URL = 'tournaments.json';
+      const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+      const ICONS = {
+        'junior-l6-l7-jrc': '🏆',
+        'junior-l4':         '🎾',
+        'adult-l6':          '🏅'
+      };
+
+      function badgeClass(level) {
+        const l = (level || '').toLowerCase().replace(/\s/g,'');
+        if (l === 'l4')  return 'tourn-badge tourn-badge--l4';
+        if (l === 'l6')  return 'tourn-badge tourn-badge--l6';
+        if (l === 'l7')  return 'tourn-badge tourn-badge--l7';
+        if (l === 'jrc') return 'tourn-badge tourn-badge--jrc';
+        return 'tourn-badge';
+      }
+
+      function renderCards(categories, activeId) {
+        const wrap = document.getElementById('tourn-cats');
+        if (!wrap) return;
+        wrap.innerHTML = categories.map(cat => {
+          const icon = ICONS[cat.id] || '🏆';
+          const isActive = cat.id === activeId;
+          return `<div class="tourn-cat-card${isActive ? ' active' : ''}" data-cat="${cat.id}" role="button" tabindex="0" aria-pressed="${isActive}">
+            <div class="tourn-cat-icon">${icon}</div>
+            <div class="tourn-cat-name">${cat.title}</div>
+            <div class="tourn-cat-div">${cat.division}</div>
+            <div class="tourn-cat-desc">${cat.description}</div>
+          </div>`;
+        }).join('');
+
+        wrap.querySelectorAll('.tourn-cat-card').forEach(card => {
+          const activate = () => {
+            const id = card.dataset.cat;
+            const cat = categories.find(c => c.id === id);
+            if (cat) renderCards(categories, id), renderPanel(cat);
+          };
+          card.addEventListener('click', activate);
+          card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+        });
+      }
+
+      function renderPanel(cat) {
+        const panel = document.getElementById('tourn-panel');
+        if (!panel) return;
+
+        const upcoming = (cat.events || []).filter(ev => ev.startDate >= today);
+
+        let rows = '';
+        if (upcoming.length === 0) {
+          rows = `<div class="tourn-empty">No upcoming events in this category — check back soon.</div>`;
+        } else {
+          rows = `<ul class="tourn-event-list">${upcoming.map(ev => {
+            const btn = ev.ustaUrl
+              ? `<a class="btn-register" href="${ev.ustaUrl}" target="_blank" rel="noopener">Register</a>`
+              : `<span class="btn-register btn-register--soon">Opening soon</span>`;
+            return `<li class="tourn-event-row">
+              <span class="tourn-date">${ev.dateLabel}</span>
+              <span class="${badgeClass(ev.level)}">${ev.level}</span>
+              <span class="tourn-name">${ev.name}</span>
+              <span class="tourn-meta">${ev.ageGroups} · ${ev.format}</span>
+              <span class="tourn-venue">${ev.venue}</span>
+              <span class="tourn-event-btn">${btn}</span>
+            </li>`;
+          }).join('')}</ul>`;
+        }
+
+        panel.innerHTML = `
+          <div class="tourn-panel-header">
+            <span class="tourn-panel-title">${cat.title}</span>
+            <span class="tourn-panel-cta">${cat.cta || ''}</span>
+          </div>
+          ${rows}`;
+      }
+
+      fetch(DATA_URL)
+        .then(r => r.json())
+        .then(data => {
+          const cats = data.categories || [];
+          if (!cats.length) return;
+          if (data.ustaProfileUrl) {
+            const link = document.getElementById('tourn-profile-link');
+            if (link) link.href = data.ustaProfileUrl;
+          }
+          renderCards(cats, cats[0].id);
+          renderPanel(cats[0]);
+        })
+        .catch(() => {
+          const panel = document.getElementById('tourn-panel');
+          if (panel) panel.innerHTML = `<div class="tourn-empty">Schedule unavailable — please check back soon.</div>`;
+        });
+    })();
+
+    /* ── Tournament notify (legacy, kept for any existing refs) ── */
     function handleTournamentNotify(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const input = e.target.querySelector('input[type="email"]');
-      btn.textContent = '✓ You\'re on the list!';
-      btn.style.background = 'var(--forest-soft)';
-      btn.disabled = true;
-      input.disabled = true;
-      // TODO: POST email to GHL webhook or mailing list
     }
 
     /* ── Booking form ── */
