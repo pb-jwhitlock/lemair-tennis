@@ -278,6 +278,18 @@
       "cta": "All skill levels 3.0–4.5 welcome. Register on USTA.",
       "events": [
         {
+          "id": "jul-04-l6-ad",
+          "startDate": "2026-07-04",
+          "endDate": "2026-07-05",
+          "dateLabel": "Jul 4–5",
+          "level": "L6",
+          "name": "L6 Adult Singles",
+          "ageGroups": "Open",
+          "format": "Men's & Women's Singles",
+          "venue": "Jefferson District Park",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98"
+        },
+        {
           "id": "oct-03-l6-ad",
           "startDate": "2026-10-03",
           "endDate": "2026-10-04",
@@ -290,24 +302,12 @@
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/E9C3905B-DD2B-4111-8BDC-9475A43FA7A0"
         },
         {
-          "id": "jul-04-l6-ad",
-          "startDate": "2026-07-04",
-          "endDate": "2026-07-05",
-          "dateLabel": "Jul 4–5",
-          "level": "L6",
-          "name": "L6 Adult Singles Open",
-          "ageGroups": "Open",
-          "format": "Men's & Women's Singles",
-          "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98"
-        },
-        {
           "id": "oct-31-l6-ad",
           "startDate": "2026-10-31",
           "endDate": "2026-11-01",
           "dateLabel": "Oct 31–Nov 1",
           "level": "L6",
-          "name": "L6 Adult Singles Open",
+          "name": "L6 Adult Singles",
           "ageGroups": "Open",
           "format": "Men's & Women's Singles",
           "venue": "Jefferson District Park",
@@ -319,7 +319,7 @@
           "endDate": "2026-11-15",
           "dateLabel": "Nov 15",
           "level": "L6",
-          "name": "L6 Adult Singles Open",
+          "name": "L6 Adult Singles",
           "ageGroups": "Open",
           "format": "Men's & Women's Singles",
           "venue": "Jefferson District Park",
