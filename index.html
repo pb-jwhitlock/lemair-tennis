@@ -2748,7 +2748,7 @@
     /* ── Tournament schedule ── */
     (function() {
       const DATA_URL = 'tournaments.json';
-      const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+      const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD — events visible through endDate, drop off midnight after
 
       const ICONS = {
         'junior-l6-l7-jrc': '🏆',
@@ -2794,7 +2794,7 @@
         const panel = document.getElementById('tourn-panel');
         if (!panel) return;
 
-        const upcoming = (cat.events || []).filter(ev => ev.startDate >= today);
+        const upcoming = (cat.events || []).filter(ev => (ev.endDate || ev.startDate) >= today);
 
         let rows = '';
         if (upcoming.length === 0) {
