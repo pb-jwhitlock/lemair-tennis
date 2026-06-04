@@ -3,7 +3,8 @@
 ## Overview
 Website for David LeMair, USPTA-certified tennis coach based in Annandale, VA.
 Built and managed by Points Beyond LLC (John Whitlock).
-Live site: https://pb-jwhitlock.github.io/lemair-tennis
+Live site: https://davidlemairtennis.com (custom domain, HTTPS enforced)
+GitHub repo: https://pb-jwhitlock.github.io/lemair-tennis (legacy URL still works)
 
 ## Client Info
 - Coach: David LeMair, USPTA & PTR Certified, 30+ years experience
@@ -53,23 +54,26 @@ Live site: https://pb-jwhitlock.github.io/lemair-tennis
 - "USTA tennis lessons Northern Virginia"
 - AEO: "how much do tennis lessons cost in Annandale VA"
 
-## Last Session Summary (2026-04-21)
-- **FAQ cleanup**: Removed subtitle line and `border-top` dividing line below the "Frequently Asked Questions" heading
-- **About section**: Reordered credentials — "Former Touring Pro and NCAA DI Player" moved to 4th/final bullet (after Junior Development Specialist)
-- **Tournament location copy**: Updated section subtitle and FAQ schema answer to say "Annandale and Falls Church, VA" (SportsEvent schema entries tied to Jefferson District Park left as Annandale-only)
+## Last Session Summary (2026-06-04)
+- **Custom domain live**: Connected `davidlemairtennis.com` to GitHub Pages — set custom domain via API, configured Cloudflare DNS with 4 GitHub A records (DNS only / gray cloud), removed 3 leftover Wix IPs
+- **HTTPS enforced**: GitHub TLS cert provisioned and approved (expires 2026-09-02); `https_enforced: true` set via API
+- **DNS decision**: Cloudflare proxy left OFF (gray cloud) to allow GitHub to manage TLS cert; Cloudflare CDN/proxy not needed for this static site
 
 ## Next Steps (resume here)
 1. Get Go High Level voice AI embed code from David → replace placeholder in `index.html`
 2. Add 2026 tournament dates when announced
 3. Consider tournament email notification signup feature
 4. Any additional SEO/content updates from David
+5. (Optional) Add SPF/DMARC records in Cloudflare if David ever sets up @davidlemairtennis.com email
 
 ## Notes
 - **GHL Voice AI**: Widget placeholder is in place; GHL UI button hidden; waiting on embed code from client
 - **Photo**: `images/david-backhand.jpg` (176 KB) — staged in About section frame
 - **Testimonials**: All rewritten for natural GBP voice; David K. testimonial unchanged by request
 - **Map**: Leaflet.js with CARTO Voyager tiles and green tint filter; red star marker at court location
-- **Deployment**: GitHub Pages at https://pb-jwhitlock.github.io/lemair-tennis (push to main to deploy)
+- **Deployment**: GitHub Pages at https://pb-jwhitlock.github.io/lemair-tennis (push to main to deploy); custom domain https://davidlemairtennis.com is live with HTTPS
+- **DNS**: Cloudflare managing DNS for davidlemairtennis.com — 4 A records pointing to GitHub Pages IPs, all gray cloud (DNS only). Do NOT proxy (orange cloud) without configuring Cloudflare SSL mode to "Full" first or cert will break.
+- **Cloudflare email records**: MX record present (p.webcom.ctmail.com). No SPF/DMARC yet — not needed until branded email is set up.
 
 ## Pending Tasks
 - [ ] Activate Voice AI widget (Go High Level embed code)
