@@ -495,6 +495,7 @@
       color: var(--chalk);
     }
     .btn-lg { padding: 17px 36px; font-size: 15px; letter-spacing: 0.06em; }
+    .btn-block { width: 100%; text-align: center; }
 
     /* ── SCROLL REVEAL ────────────────────────────── */
     .reveal {
@@ -746,6 +747,36 @@
       font-size: 13px;
       color: var(--mist);
       margin-bottom: 6px;
+    }
+    .hero__cta-phone {
+      display: block;
+      text-align: center;
+      font-family: var(--ff-body);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      margin-top: 14px;
+      cursor: pointer;
+      transition: color 0.2s var(--ease-out);
+    }
+    .hero__cta-phone:hover { color: var(--copper); }
+    .hero__cta-email {
+      display: block;
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--mist);
+      text-decoration: none;
+      margin-top: 10px;
+      transition: color 0.2s var(--ease-out);
+    }
+    .hero__cta-email:hover { color: var(--copper); text-decoration: underline; }
+    .hero__cta-trust {
+      font-size: 0.85rem;
+      color: var(--mist);
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 0;
     }
     .hero__form { display: flex; flex-direction: column; gap: 12px; }
     .hero__form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -1937,21 +1968,35 @@
             </div>
           </div>
 
-          <!-- Booking card -->
+          <!-- TEMP 2026-06-05: GHL form in development. Restore the commented block below and remove .hero__cta-direct when GHL form is wired. -->
+          <div class="hero__card hero__cta-direct reveal reveal-delay-2" id="book">
+            <h3 class="hero__card-title">Talk to David Directly</h3>
+            <p class="hero__card-sub">
+              Lessons start with a conversation. Call or text —
+              David personally responds within 24 hours.
+            </p>
+            <a href="tel:+17038628702" class="btn btn-copper btn-lg btn-block">
+              Call or Text David
+            </a>
+            <a href="tel:+17038628702" class="hero__cta-phone">(703) 862-8702</a>
+            <a href="mailto:davidlemairtennis@gmail.com" class="hero__cta-email">
+              or email David →
+            </a>
+            <p class="hero__cta-trust">Typically replies within a few hours · Lessons available 7 days a week</p>
+          </div>
+
+          <!--
+          TEMP 2026-06-05: GHL form in development. Restore this block and remove .hero__cta-direct above when form is wired.
           <div class="hero__card reveal reveal-delay-2" id="book">
             <div class="hero__card-title">Let's Find the Right Program for You</div>
             <p class="hero__card-sub" style="font-size:14px; color:var(--mist); text-align:center; margin-bottom:14px;"><span style="display:block;text-align:center;">Get a Personalized Coaching Plan</span><span style="display:block;text-align:center;">No Commitment</span></p>
             <form class="hero__form" id="bookingForm" onsubmit="handleBooking(event)">
-              <!-- Row 1: Name -->
               <div class="hero__form-row">
                 <input type="text" name="first_name" placeholder="First Name" required />
                 <input type="text" name="last_name" placeholder="Last Name" required />
               </div>
-              <!-- Row 2: Phone -->
               <input type="tel" name="phone" id="phoneInput" placeholder="Phone" required />
-              <!-- Row 3: Email -->
               <input type="email" name="email" placeholder="Email Address" required />
-              <!-- Row 4: Preferred Schedule -->
               <select name="preferred_schedule" id="preferredSchedule" required>
                 <option value="" disabled selected>Preferred Schedule</option>
                 <option>Weekday Mornings (8am–12pm)</option>
@@ -1960,7 +2005,6 @@
                 <option>Weekends (Anytime)</option>
                 <option>Flexible / No Preference</option>
               </select>
-              <!-- Row 5: Contact Preference -->
               <div class="hero__form-field">
                 <div class="hero__form-chips-label">Contact Preference?</div>
                 <div style="display:flex; gap:20px; align-items:center;">
@@ -1972,7 +2016,6 @@
                   </label>
                 </div>
               </div>
-              <!-- Row 6: Lead source chips -->
               <div>
                 <div class="hero__form-chips-label">How did you hear about us?</div>
                 <div class="hero__form-chips">
@@ -1990,6 +2033,7 @@
               By submitting you agree to be contacted. No spam, ever.
             </p>
           </div>
+          -->
         </div>
       </div>
     </div>
