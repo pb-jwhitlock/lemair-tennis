@@ -2774,9 +2774,9 @@
       const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD — events visible through endDate, drop off midnight after
 
       const ICONS = {
-        'junior-l6-l7-jrc': '🏆',
-        'junior-l4':         '🎾',
-        'adult-l6':          '🏅'
+        'junior-bg10-circuit': '🎾',
+        'junior-l4':           '🏆',
+        'adult-l6':            '🏅'
       };
 
       function badgeClass(level) {
@@ -2855,8 +2855,9 @@
             const link = document.getElementById('tourn-profile-link');
             if (link) link.href = data.ustaProfileUrl;
           }
-          renderCards(cats, cats[0].id);
-          renderPanel(cats[0]);
+          const defaultCat = cats.find(c => c.id === 'junior-l4') || cats[0];
+          renderCards(cats, defaultCat.id);
+          renderPanel(defaultCat);
         })
         .catch(() => {
           const panel = document.getElementById('tourn-panel');
