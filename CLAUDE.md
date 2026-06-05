@@ -37,14 +37,15 @@ GitHub repo: https://pb-jwhitlock.github.io/lemair-tennis (legacy URL still work
 - [x] FAQ accordion
 - [x] Virtual assistant chatbot ("Ace")
 - [x] Voice AI widget placeholder (Go High Level — GHL UI removed, button hidden)
-- [x] USTA tournament section (L7/L6 Events, NTRP on adult cards)
+- [x] USTA tournament section — dynamic, data-driven from tournaments.json
 - [x] Service area section with court list + Leaflet map (CARTO Voyager tiles)
 - [x] Pricing packages
 - [x] Testimonials (5-star reviews, all rewritten for GBP-style voice)
 - [x] David backhand photo in About section
 - [x] Schema alignment (SportsEvent, FAQ, service area)
+- [x] 2026 tournament dates live (all 25 events verified against USTA URLs)
 - [ ] Voice AI embed code (pending Go High Level setup)
-- [ ] 2026 tournament dates
+- [ ] GHL custom booking form integration (planned)
 
 ## SEO/AEO Keywords
 - "tennis lessons Annandale VA"
@@ -55,16 +56,15 @@ GitHub repo: https://pb-jwhitlock.github.io/lemair-tennis (legacy URL still work
 - AEO: "how much do tennis lessons cost in Annandale VA"
 
 ## Last Session Summary (2026-06-04)
-- **Custom domain live**: Connected `davidlemairtennis.com` to GitHub Pages — set custom domain via API, configured Cloudflare DNS with 4 GitHub A records (DNS only / gray cloud), removed 3 leftover Wix IPs
-- **HTTPS enforced**: GitHub TLS cert provisioned and approved (expires 2026-09-02); `https_enforced: true` set via API
-- **DNS decision**: Cloudflare proxy left OFF (gray cloud) to allow GitHub to manage TLS cert; Cloudflare CDN/proxy not needed for this static site
+- **Custom domain + HTTPS live**: Connected `davidlemairtennis.com` to GitHub Pages, Cloudflare DNS configured with 4 GitHub A records (gray cloud / DNS only), TLS cert provisioned and enforced
+- **Dynamic tournament schedule**: Built JS-rendered tournament section from `tournaments.json` — 3 clickable category cards, upcoming events filtered by endDate, Register buttons link to USTA; all 25 events verified against USTA URLs via Chrome extension; corrected levels, categories, and age groups across multiple entries
+- **Hero card polish**: Removed redundant "✓ PTR Certified" and full trust bar below View Programs button; tightened hero booking card padding throughout
 
 ## Next Steps (resume here)
-1. Get Go High Level voice AI embed code from David → replace placeholder in `index.html`
-2. Add 2026 tournament dates when announced
-3. Consider tournament email notification signup feature
-4. Any additional SEO/content updates from David
-5. (Optional) Add SPF/DMARC records in Cloudflare if David ever sets up @davidlemairtennis.com email
+1. **GHL custom booking form** — integrate GHL form embed into hero card, matching existing dark green/gold style (planned for next session)
+2. Get Go High Level voice AI embed code from David → replace placeholder in `index.html`
+3. Any additional SEO/content updates from David
+4. (Optional) Add SPF/DMARC records in Cloudflare if David ever sets up @davidlemairtennis.com email
 
 ## Notes
 - **GHL Voice AI**: Widget placeholder is in place; GHL UI button hidden; waiting on embed code from client
@@ -74,11 +74,12 @@ GitHub repo: https://pb-jwhitlock.github.io/lemair-tennis (legacy URL still work
 - **Deployment**: GitHub Pages at https://pb-jwhitlock.github.io/lemair-tennis (push to main to deploy); custom domain https://davidlemairtennis.com is live with HTTPS
 - **DNS**: Cloudflare managing DNS for davidlemairtennis.com — 4 A records pointing to GitHub Pages IPs, all gray cloud (DNS only). Do NOT proxy (orange cloud) without configuring Cloudflare SSL mode to "Full" first or cert will break.
 - **Cloudflare email records**: MX record present (p.webcom.ctmail.com). No SPF/DMARC yet — not needed until branded email is set up.
+- **tournaments.json**: Source of truth for all tournament data. Events filter by `endDate >= today` (drop off midnight after last day). `note` field supported for any event (renders as small italic line below format). Adult L6 card has Jul 4–5, Oct 31–Nov 1, Nov 15. Junior card has all remaining L6/L7/Jr C events.
+- **GHL form**: Client to provide embed code — will replace existing hero booking form with styled GHL form matching site palette.
 
 ## Pending Tasks
+- [ ] Integrate GHL custom booking form into hero card
 - [ ] Activate Voice AI widget (Go High Level embed code)
-- [ ] Add 2026 tournament schedule dates
-- [ ] Tournament email notification signup
 - [ ] Any content or SEO updates from client
 
 ## Skills Library
