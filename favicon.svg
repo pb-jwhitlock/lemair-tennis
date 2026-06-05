@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="trophy" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%"   stop-color="#faeea0"/>
+      <stop offset="45%"  stop-color="#e8b820"/>
+      <stop offset="100%" stop-color="#8a5c00"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background: dark green rounded square -->
+  <rect width="64" height="64" rx="14" fill="#1a271a"/>
+
+  <!-- Trophy group, rotated -12 degrees around center -->
+  <g transform="rotate(-12, 32, 32)" fill="url(#trophy)">
+    <!-- Cup body (wide trapezoid) -->
+    <path d="M20 14 Q20 11 23 11 L41 11 Q44 11 44 14 L42 30 Q41 37 32 37 Q23 37 22 30 Z"/>
+
+    <!-- Left handle -->
+    <path d="M20 15 Q12 15 12 22 Q12 29 20 29 L22 29 L22 26 Q16 26 16 22 Q16 18 20 18 Z" rx="3"/>
+
+    <!-- Right handle -->
+    <path d="M44 15 Q52 15 52 22 Q52 29 44 29 L42 29 L42 26 Q48 26 48 22 Q48 18 44 18 Z" rx="3"/>
+
+    <!-- Stem -->
+    <rect x="29" y="37" width="6" height="8" rx="2"/>
+
+    <!-- Base plate bottom -->
+    <rect x="22" y="45" width="20" height="4" rx="2"/>
+
+    <!-- Base plate top accent -->
+    <rect x="25" y="43" width="14" height="3" rx="1.5"/>
+  </g>
+</svg>
