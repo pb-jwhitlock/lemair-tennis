@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "junior-bg10-circuit",
-      "title": "BG <span style=\"font-size:1.5em; line-height:1;\">10</span>&Unders",
+      "title": "BG <span style=\"font-size:1.2em; line-height:1;\">10</span>&Unders",
       "division": "Junior Circuit",
       "description": "Uses a non-elimination, round-robin draw format so players ages 10&Under can gain match experience in a tournament setting. USTA Junior Circuits count towards the PlayTracker for 10&Unders.",
       "cta": "Find your age group below and register through USTA.",
@@ -35,9 +35,9 @@
     },
     {
       "id": "junior-l4",
-      "title": "L4 Events",
-      "division": "Junior Division",
-      "description": "Competitive doubles and mixed doubles for experienced juniors ages 12–18. USTA Level 4 — strong competition and great team experience.",
+      "title": "L3 - L7's",
+      "division": "Junior Tournaments",
+      "description": "USTA-sanctioned singles and/or doubles competition for Boys and Girls 12&Unders, 14&Unders, 16&Unders and 18&Unders.",
       "cta": "Select your age group and register on USTA.",
       "events": [
         {
