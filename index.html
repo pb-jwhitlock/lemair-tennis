@@ -2088,7 +2088,6 @@
 
         <!-- Semi-Private (featured) -->
         <div class="service-card service-card--featured">
-          <div class="service-card__popular">Most Popular</div>
           <div class="service-card__tag">Semi-Private</div>
           <h3 class="service-card__title">Semi-Private Lessons</h3>
           <p class="service-card__desc">Share the court with one partner. Focused coaching at a fraction of the private cost — perfect for couples, friends, or parent &amp; child.</p>
@@ -2833,7 +2832,7 @@
               <span class="${badgeClass(ev.level)}">${ev.level}</span>
               <span class="tourn-name">${ev.name}</span>
               <span class="tourn-meta">${ev.ageGroups} · ${ev.format}${ev.note ? `<br><span style="font-size:11px;color:rgba(247,243,235,0.35);font-style:italic;">${ev.note}</span>` : ''}</span>
-              <span class="tourn-venue">${ev.venue}</span>
+              ${ev.venue ? `<span class="tourn-venue">${ev.venue}</span>` : '<span></span>'}
               <span class="tourn-event-btn">${btn}</span>
             </li>`;
           }).join('')}</ul>`;
