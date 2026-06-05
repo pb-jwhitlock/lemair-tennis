@@ -1,11 +1,44 @@
 {
   "categories": [
     {
-      "id": "junior-l6-l7-jrc",
-      "title": "L6, L7 & Jr C Events",
+      "id": "junior-bg10-circuit",
+      "title": "BG 10&Unders Junior Circuit",
       "division": "Junior Division",
-      "description": "USTA-sanctioned singles competition for boys & girls ages 10–18. A great first tournament experience and pathway to higher-level play.",
+      "description": "Uses a non-elimination, round-robin draw format so players ages 10&Under can gain match experience in a tournament setting. USTA Junior Circuits count towards the PlayTracker for 10&Unders.",
       "cta": "Find your age group below and register through USTA.",
+      "events": [
+        {
+          "id": "jun-28-jrc",
+          "startDate": "2026-06-28",
+          "endDate": "2026-06-28",
+          "dateLabel": "Jun 28",
+          "level": "Jr C",
+          "name": "Jr C Open",
+          "ageGroups": "BG 10",
+          "format": "Singles",
+          "venue": "Jefferson District Park",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/1950EEAB-1D31-4816-8136-1FA08010EA92"
+        },
+        {
+          "id": "nov-01-jrc",
+          "startDate": "2026-11-01",
+          "endDate": "2026-11-01",
+          "dateLabel": "Nov 1",
+          "level": "Jr C",
+          "name": "Jr C Open",
+          "ageGroups": "BG 10",
+          "format": "Singles",
+          "venue": "",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/18CA1DD5-7FA8-4C94-80F1-70A2A902CDEE"
+        }
+      ]
+    },
+    {
+      "id": "junior-l4",
+      "title": "L4 Events",
+      "division": "Junior Division",
+      "description": "Competitive doubles and mixed doubles for experienced juniors ages 12–18. USTA Level 4 — strong competition and great team experience.",
+      "cta": "Select your age group and register on USTA.",
       "events": [
         {
           "id": "jun-20-l6",
@@ -30,18 +63,6 @@
           "format": "Singles",
           "venue": "Jefferson District Park",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/22531D2F-2D2D-4E4B-86D9-0916966A5A90"
-        },
-        {
-          "id": "jun-28-jrc",
-          "startDate": "2026-06-28",
-          "endDate": "2026-06-28",
-          "dateLabel": "Jun 28",
-          "level": "Jr C",
-          "name": "Jr C Open",
-          "ageGroups": "BG 10",
-          "format": "Singles",
-          "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/1950EEAB-1D31-4816-8136-1FA08010EA92"
         },
         {
           "id": "jul-04-l7",
@@ -80,6 +101,18 @@
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/F5D2635B-D998-468A-824C-6330CC4EED9B"
         },
         {
+          "id": "aug-15-l4",
+          "startDate": "2026-08-15",
+          "endDate": "2026-08-16",
+          "dateLabel": "Aug 15–16",
+          "level": "L4",
+          "name": "L4 Mixed Doubles",
+          "ageGroups": "BG 12–18",
+          "format": "Mixed Doubles",
+          "venue": "Wakefield Park / Audrey Moore Rec Center",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/9744FE12-4E3C-483A-B5DD-93A9450F3E4A"
+        },
+        {
           "id": "aug-22-l7",
           "startDate": "2026-08-22",
           "endDate": "2026-08-23",
@@ -114,6 +147,18 @@
           "format": "Singles",
           "venue": "",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/E5C9F61D-FBBF-404E-A7FE-2C800887F201"
+        },
+        {
+          "id": "sep-19-l4",
+          "startDate": "2026-09-19",
+          "endDate": "2026-09-20",
+          "dateLabel": "Sep 19–20",
+          "level": "L4",
+          "name": "L4 Doubles",
+          "ageGroups": "Boys & Girls 16",
+          "format": "Doubles",
+          "venue": "",
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/C524DA96-7513-4332-9258-BD7FB7C50F6F"
         },
         {
           "id": "sep-19-l6",
@@ -176,18 +221,6 @@
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/153E288B-91C9-486F-80CA-7EF0C45EB0D5"
         },
         {
-          "id": "nov-01-jrc",
-          "startDate": "2026-11-01",
-          "endDate": "2026-11-01",
-          "dateLabel": "Nov 1",
-          "level": "Jr C",
-          "name": "Jr C Open",
-          "ageGroups": "BG 10",
-          "format": "Singles",
-          "venue": "",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/18CA1DD5-7FA8-4C94-80F1-70A2A902CDEE"
-        },
-        {
           "id": "nov-07-l7",
           "startDate": "2026-11-07",
           "endDate": "2026-11-08",
@@ -234,39 +267,6 @@
           "format": "Singles",
           "venue": "",
           "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/E22BCBEA-49AB-46A7-98EF-F59064C74207"
-        }
-      ]
-    },
-    {
-      "id": "junior-l4",
-      "title": "L4 Events",
-      "division": "Junior Division",
-      "description": "Competitive doubles and mixed doubles for experienced juniors ages 12–18. USTA Level 4 — strong competition and great team experience.",
-      "cta": "Select your age group and register on USTA.",
-      "events": [
-        {
-          "id": "aug-15-l4",
-          "startDate": "2026-08-15",
-          "endDate": "2026-08-16",
-          "dateLabel": "Aug 15–16",
-          "level": "L4",
-          "name": "L4 Mixed Doubles",
-          "ageGroups": "BG 12–18",
-          "format": "Mixed Doubles",
-          "venue": "Wakefield Park / Audrey Moore Rec Center",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/9744FE12-4E3C-483A-B5DD-93A9450F3E4A"
-        },
-        {
-          "id": "sep-19-l4",
-          "startDate": "2026-09-19",
-          "endDate": "2026-09-20",
-          "dateLabel": "Sep 19–20",
-          "level": "L4",
-          "name": "L4 Doubles",
-          "ageGroups": "Boys & Girls 16",
-          "format": "Doubles",
-          "venue": "",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/C524DA96-7513-4332-9258-BD7FB7C50F6F"
         }
       ]
     },
