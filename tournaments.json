@@ -309,7 +309,8 @@
           "format": "Men's & Women's Singles",
           "note": "*NTRP 3.5–4.5",
           "venue": "Jefferson District Park",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98"
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3BFB52CC-F328-4B92-B92F-A821711FFD98",
+          "registerBy": "Jun 28"
         },
         {
           "id": "oct-31-l6-ad",
@@ -321,7 +322,8 @@
           "ageGroups": "Open",
           "format": "Men's & Women's Singles",
           "venue": "",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/638F6AC7-5A49-4BE1-8E58-FEC86999AC76"
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/638F6AC7-5A49-4BE1-8E58-FEC86999AC76",
+          "registerBy": "Oct 25"
         },
         {
           "id": "nov-15-l6-ad",
@@ -333,7 +335,8 @@
           "ageGroups": "Open",
           "format": "Men's & Women's Singles",
           "venue": "",
-          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3D3BB1C5-3178-4548-9AF2-6E1AA514F2C9"
+          "ustaUrl": "https://playtennis.usta.com/davidlemairtennis0/Tournaments/overview/3D3BB1C5-3178-4548-9AF2-6E1AA514F2C9",
+          "registerBy": "Nov 9"
         }
       ]
     }
