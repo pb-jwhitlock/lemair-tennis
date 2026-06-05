@@ -2825,7 +2825,7 @@
         } else {
           rows = `<ul class="tourn-event-list">${upcoming.map(ev => {
             const btn = ev.ustaUrl
-              ? `<a class="btn-register" href="${ev.ustaUrl}" target="_blank" rel="noopener">Register</a>`
+              ? `<a class="btn-register" href="${ev.ustaUrl}" target="_blank" rel="noopener">${ev.registerBy ? `Register by ${ev.registerBy}` : 'Register'}</a>`
               : `<span class="btn-register btn-register--soon">Opening soon</span>`;
             return `<li class="tourn-event-row">
               <span class="tourn-date">${ev.dateLabel}</span>
