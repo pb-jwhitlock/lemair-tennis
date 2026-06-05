@@ -35,7 +35,7 @@
     },
     {
       "id": "junior-l4",
-      "title": "L3 - L7's",
+      "title": "L<span style=\"font-size:1.3em; line-height:1;\">3</span> - L<span style=\"font-size:1.3em; line-height:1;\">7</span>'s",
       "division": "Junior Tournaments",
       "description": "USTA-sanctioned singles and/or doubles competition for Boys and Girls 12&Unders, 14&Unders, 16&Unders and 18&Unders.",
       "cta": "Select your age group and register on USTA.",
@@ -272,9 +272,9 @@
     },
     {
       "id": "adult-l6",
-      "title": "L6 Adult Singles",
-      "division": "Adult Division",
-      "description": "USTA-sanctioned adult singles open to NTRP 3.0–4.5 players. Compete in a welcoming, organized environment hosted by David LeMair Tennis.",
+      "title": "L<span style=\"font-size:1.3em; line-height:1;\">5</span> - L<span style=\"font-size:1.3em; line-height:1;\">7</span>'s",
+      "division": "Adult Tournaments",
+      "description": "USTA-sanctioned singles and/or doubles competition for adults of all ages and NTRP 3.0-4.5.",
       "cta": "All skill levels 3.0–4.5 welcome. Register on USTA.",
       "events": [
         {
