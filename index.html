@@ -2769,7 +2769,8 @@
       setTimeout(() => addBubble(getReply(q), false), 700);
     }
 
-    document.getElementById('agentInput').focus();
+    // Removed: caused browser to auto-scroll to FAQ section on page load
+    // document.getElementById('agentInput').focus();
     document.getElementById('agentInput').addEventListener('keydown', e => {
       if (e.key === 'Enter') sendMsg();
     });
