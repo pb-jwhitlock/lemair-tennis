@@ -2015,14 +2015,19 @@
                   </label>
                 </div>
               </div>
-              <div>
+              <div class="hero__form-field">
                 <div class="hero__form-chips-label">How did you hear about us?</div>
-                <div class="hero__form-chips">
-                  <button type="button" class="hero__form-chip" data-value="Referral">Referral</button>
-                  <button type="button" class="hero__form-chip" data-value="Search">Search</button>
-                  <button type="button" class="hero__form-chip" data-value="Social Media">Social Media</button>
+                <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+                  <label style="display:flex; align-items:center; gap:6px; font-size:14px; color:var(--ink-mid); cursor:pointer;">
+                    <input type="radio" name="lead_source" value="Referral" style="width:auto; accent-color:var(--copper);" /> Referral
+                  </label>
+                  <label style="display:flex; align-items:center; gap:6px; font-size:14px; color:var(--ink-mid); cursor:pointer;">
+                    <input type="radio" name="lead_source" value="Search" style="width:auto; accent-color:var(--copper);" /> Search
+                  </label>
+                  <label style="display:flex; align-items:center; gap:6px; font-size:14px; color:var(--ink-mid); cursor:pointer;">
+                    <input type="radio" name="lead_source" value="Social Media" style="width:auto; accent-color:var(--copper);" /> Social Media
+                  </label>
                 </div>
-                <input type="hidden" id="leadSource" name="lead_source" />
               </div>
               <button type="submit" class="btn btn-copper btn-lg" style="width:100%;margin-top:12px;">
                 Request Info
@@ -2934,14 +2939,6 @@
       this.value = formatted;
     });
 
-    /* ── Lead source chips ── */
-    document.querySelectorAll('.hero__form-chip').forEach(chip => {
-      chip.addEventListener('click', function() {
-        document.querySelectorAll('.hero__form-chip').forEach(c => c.classList.remove('selected'));
-        this.classList.add('selected');
-        document.getElementById('leadSource').value = this.dataset.value;
-      });
-    });
 
     /* ── Hide #book URL on hover ── */
     document.querySelectorAll('a[href="#book"]').forEach(a => {
